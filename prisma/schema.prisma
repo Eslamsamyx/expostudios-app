@@ -1,0 +1,286 @@
+// This is your Prisma schema file
+// Learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User Roles Enum
+enum Role {
+  ADMIN
+  WRITER
+  SALES
+  USER
+}
+
+// Article Status Enum
+enum ArticleStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+// Lead Source Enum
+enum LeadSource {
+  WEBSITE
+  COMING_SOON
+  CONTACT_FORM
+  SOCIAL_MEDIA
+  REFERRAL
+  OTHER
+}
+
+// User Model
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password      String
+  name          String?
+  role          Role      @default(USER)
+  isActive      Boolean   @default(true)
+  emailVerified Boolean   @default(false)
+  avatar        String?
+  bio           String?
+
+  // Timestamps
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  lastLoginAt   DateTime?
+
+  // Relations
+  articles      Article[]
+  sessions      Session[]
+  activities    ActivityLog[]
+  media         Media[]
+
+  @@index([email])
+  @@index([role])
+}
+
+// Session Model for Authentication
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([userId])
+}
+
+// Newsletter Subscription Model
+model Newsletter {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  name            String?
+  isSubscribed    Boolean   @default(true)
+  subscribedAt    DateTime  @default(now())
+  unsubscribedAt  DateTime?
+
+  // Tracking
+  source          LeadSource @default(COMING_SOON)
+  ipAddress       String?
+  userAgent       String?
+  referrer        String?
+
+  // UTM Parameters
+  utmSource       String?
+  utmMedium       String?
+  utmCampaign     String?
+  utmTerm         String?
+  utmContent      String?
+
+  // Engagement Metrics
+  emailsReceived  Int       @default(0)
+  emailsOpened    Int       @default(0)
+  linksClicked    Int       @default(0)
+
+  // Tags for segmentation
+  tags            String[]
+
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  // Relations
+  lead            Lead?
+
+  @@index([email])
+  @@index([isSubscribed])
+  @@index([source])
+  @@index([createdAt])
+}
+
+// Lead Model (Extended from Newsletter for Sales Dashboard)
+model Lead {
+  id              String      @id @default(cuid())
+  newsletterId    String?     @unique
+  newsletter      Newsletter? @relation(fields: [newsletterId], references: [id])
+
+  // Contact Information
+  email           String      @unique
+  phone           String?
+  company         String?
+  jobTitle        String?
+
+  // Lead Details
+  status          String      @default("NEW") // NEW, CONTACTED, QUALIFIED, PROPOSAL, NEGOTIATION, WON, LOST
+  score           Int         @default(0)
+  source          LeadSource
+
+  // Project Interest
+  projectType     String?     // Exhibition, Experience Center, etc.
+  budget          String?     // Budget range
+  timeline        String?     // Project timeline
+  message         String?     // Initial message/requirements
+
+  // Sales Information
+  assignedTo      String?     // Sales person assigned
+  lastContactedAt DateTime?
+  nextFollowUp    DateTime?
+  notes           String?
+
+  // Conversion Tracking
+  convertedAt     DateTime?
+  dealValue       Float?
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  // Relations
+  interactions    Interaction[]
+
+  @@index([email])
+  @@index([status])
+  @@index([assignedTo])
+  @@index([createdAt])
+}
+
+// Interaction Model (Track all interactions with leads)
+model Interaction {
+  id          String   @id @default(cuid())
+  leadId      String
+  lead        Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  type        String   // EMAIL, CALL, MEETING, NOTE
+  subject     String?
+  description String
+  outcome     String?
+
+  createdBy   String   // User ID who created the interaction
+  createdAt   DateTime @default(now())
+
+  @@index([leadId])
+  @@index([createdAt])
+}
+
+// Article Model
+model Article {
+  id          String        @id @default(cuid())
+  slug        String        @unique
+  title       String
+  excerpt     String?
+  content     String        // Rich text content
+  coverImage  String?
+
+  // SEO
+  metaTitle   String?
+  metaDescription String?
+  keywords    String[]
+
+  // Publishing
+  status      ArticleStatus @default(DRAFT)
+  publishedAt DateTime?
+  featuredAt  DateTime?     // If featured on homepage
+
+  // Author
+  authorId    String
+  author      User          @relation(fields: [authorId], references: [id])
+
+  // Analytics
+  views       Int           @default(0)
+  shares      Int           @default(0)
+
+  // Categories and Tags
+  category    String?
+  tags        String[]
+
+  // Settings
+  allowComments Boolean     @default(true)
+  isPremium   Boolean       @default(false)
+
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([slug])
+  @@index([status])
+  @@index([authorId])
+  @@index([publishedAt])
+  @@index([category])
+}
+
+// Activity Log Model (Track all system activities)
+model ActivityLog {
+  id          String   @id @default(cuid())
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
+
+  action      String   // LOGIN, LOGOUT, CREATE, UPDATE, DELETE, etc.
+  entity      String   // User, Article, Lead, Newsletter, etc.
+  entityId    String?
+
+  details     Json?    // Additional details about the action
+  ipAddress   String?
+  userAgent   String?
+
+  createdAt   DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([entity])
+  @@index([createdAt])
+}
+
+// Settings Model (Store application settings)
+model Settings {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  value       Json
+  description String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([key])
+}
+
+// Media Model for file uploads
+model Media {
+  id          String   @id @default(cuid())
+  filename    String
+  originalName String
+  url         String
+  publicUrl   String?
+  size        Int
+  mimeType    String
+  width       Int?
+  height      Int?
+
+  // Upload metadata
+  uploadedBy  String
+  uploader    User     @relation(fields: [uploadedBy], references: [id])
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([uploadedBy])
+  @@index([mimeType])
+  @@index([createdAt])
+}
