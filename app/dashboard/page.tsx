@@ -130,7 +130,10 @@ export default function DashboardPage() {
               </div>
 
               <button
-                onClick={() => signOut({ callbackUrl: '/login' })}
+                onClick={() => {
+                  const currentOrigin = window.location.origin;
+                  signOut({ callbackUrl: `${currentOrigin}/login` });
+                }}
                 className="px-4 py-2 rounded-lg text-sm font-light transition-all duration-300 hover:opacity-80"
                 style={{
                   background: 'linear-gradient(135deg, rgba(42, 46, 53, 0.8) 0%, rgba(42, 46, 53, 0.4) 100%)',
@@ -159,7 +162,7 @@ export default function DashboardPage() {
                 Welcome Back
               </h2>
               <p className="text-lg" style={{ color: '#8A94A6' }}>
-                Here's what's happening with your platform today
+                Here&apos;s what&apos;s happening with your platform today
               </p>
             </motion.div>
 
@@ -168,107 +171,115 @@ export default function DashboardPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+              className={`grid ${session.user.role === 'WRITER' ? 'grid-cols-1 md:grid-cols-1 lg:grid-cols-1 max-w-md' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'} gap-6 mb-8`}
             >
-              {/* Newsletter Subscribers */}
-              <div
-                className="p-6 rounded-xl"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(42, 46, 53, 0.8) 0%, rgba(42, 46, 53, 0.4) 100%)',
-                  backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(195, 163, 85, 0.2)',
-                }}
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-light" style={{ color: '#8A94A6' }}>
-                    Newsletter Subscribers
-                  </span>
-                  <svg className="w-5 h-5" style={{ color: '#4A8E55' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
+              {/* Newsletter Subscribers - Only show for ADMIN and SALES */}
+              {['ADMIN', 'SALES'].includes(session.user.role) && (
+                <div
+                  className="p-6 rounded-xl"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(42, 46, 53, 0.8) 0%, rgba(42, 46, 53, 0.4) 100%)',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(195, 163, 85, 0.2)',
+                  }}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-light" style={{ color: '#8A94A6' }}>
+                      Newsletter Subscribers
+                    </span>
+                    <svg className="w-5 h-5" style={{ color: '#4A8E55' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div className="text-3xl font-light mb-1" style={{ color: '#E8ECEF' }}>
+                    {stats.totalSubscribers}
+                  </div>
+                  <div className="text-xs" style={{ color: '#4A8E55' }}>
+                    +12% from last month
+                  </div>
                 </div>
-                <div className="text-3xl font-light mb-1" style={{ color: '#E8ECEF' }}>
-                  {stats.totalSubscribers}
-                </div>
-                <div className="text-xs" style={{ color: '#4A8E55' }}>
-                  +12% from last month
-                </div>
-              </div>
+              )}
 
-              {/* New Leads */}
-              <div
-                className="p-6 rounded-xl"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(42, 46, 53, 0.8) 0%, rgba(42, 46, 53, 0.4) 100%)',
-                  backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(195, 163, 85, 0.2)',
-                }}
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-light" style={{ color: '#8A94A6' }}>
-                    New Leads
-                  </span>
-                  <svg className="w-5 h-5" style={{ color: '#22D3EE' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
+              {/* New Leads - Only show for ADMIN and SALES */}
+              {['ADMIN', 'SALES'].includes(session.user.role) && (
+                <div
+                  className="p-6 rounded-xl"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(42, 46, 53, 0.8) 0%, rgba(42, 46, 53, 0.4) 100%)',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(195, 163, 85, 0.2)',
+                  }}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-light" style={{ color: '#8A94A6' }}>
+                      New Leads
+                    </span>
+                    <svg className="w-5 h-5" style={{ color: '#22D3EE' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div className="text-3xl font-light mb-1" style={{ color: '#E8ECEF' }}>
+                    {stats.newLeads}
+                  </div>
+                  <div className="text-xs" style={{ color: '#22D3EE' }}>
+                    This week
+                  </div>
                 </div>
-                <div className="text-3xl font-light mb-1" style={{ color: '#E8ECEF' }}>
-                  {stats.newLeads}
-                </div>
-                <div className="text-xs" style={{ color: '#22D3EE' }}>
-                  This week
-                </div>
-              </div>
+              )}
 
-              {/* Articles Published */}
-              <div
-                className="p-6 rounded-xl"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(42, 46, 53, 0.8) 0%, rgba(42, 46, 53, 0.4) 100%)',
-                  backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(195, 163, 85, 0.2)',
-                }}
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-light" style={{ color: '#8A94A6' }}>
-                    Articles Published
-                  </span>
-                  <svg className="w-5 h-5" style={{ color: '#C3A355' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
+              {/* Articles Published - Show for ADMIN and WRITER only */}
+              {['ADMIN', 'WRITER'].includes(session.user.role) && (
+                <div
+                  className="p-6 rounded-xl"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(42, 46, 53, 0.8) 0%, rgba(42, 46, 53, 0.4) 100%)',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(195, 163, 85, 0.2)',
+                  }}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-light" style={{ color: '#8A94A6' }}>
+                      Articles Published
+                    </span>
+                    <svg className="w-5 h-5" style={{ color: '#C3A355' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div className="text-3xl font-light mb-1" style={{ color: '#E8ECEF' }}>
+                    {stats.articlesPublished}
+                  </div>
+                  <div className="text-xs" style={{ color: '#C3A355' }}>
+                    Total articles
+                  </div>
                 </div>
-                <div className="text-3xl font-light mb-1" style={{ color: '#E8ECEF' }}>
-                  {stats.articlesPublished}
-                </div>
-                <div className="text-xs" style={{ color: '#C3A355' }}>
-                  Total articles
-                </div>
-              </div>
+              )}
 
-              {/* Recent Activity */}
-              <div
-                className="p-6 rounded-xl"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(42, 46, 53, 0.8) 0%, rgba(42, 46, 53, 0.4) 100%)',
-                  backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(195, 163, 85, 0.2)',
-                }}
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-light" style={{ color: '#8A94A6' }}>
-                    Recent Activity
-                  </span>
-                  <svg className="w-5 h-5" style={{ color: '#8A94A6' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              {/* Recent Activity - Only show for ADMIN */}
+              {session.user.role === 'ADMIN' && (
+                <div
+                  className="p-6 rounded-xl"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(42, 46, 53, 0.8) 0%, rgba(42, 46, 53, 0.4) 100%)',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(195, 163, 85, 0.2)',
+                  }}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-light" style={{ color: '#8A94A6' }}>
+                      Recent Activity
+                    </span>
+                    <svg className="w-5 h-5" style={{ color: '#8A94A6' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="text-3xl font-light mb-1" style={{ color: '#E8ECEF' }}>
+                    {stats.recentActivity}
+                  </div>
+                  <div className="text-xs" style={{ color: '#8A94A6' }}>
+                    Last 24 hours
+                  </div>
                 </div>
-                <div className="text-3xl font-light mb-1" style={{ color: '#E8ECEF' }}>
-                  {stats.recentActivity}
-                </div>
-                <div className="text-xs" style={{ color: '#8A94A6' }}>
-                  Last 24 hours
-                </div>
-              </div>
+              )}
             </motion.div>
 
             {/* Quick Actions */}
