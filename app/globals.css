@@ -37,6 +37,21 @@ body {
   padding: 0;
 }
 
+/* Safari Animation Optimization - Hardware Acceleration */
+* {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+[class*="motion"],
+[data-framer-component-type] {
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
 /* Glass Morphism Utilities */
 .glass {
   background: rgba(255, 255, 255, 0.02);
