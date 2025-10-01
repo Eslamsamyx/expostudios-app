@@ -65,6 +65,12 @@ export default function AnimatedSection({
       whileInView="visible"
       viewport={viewport}
       variants={delayedVariants}
+      style={{
+        willChange: 'transform, opacity',
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden',
+        transform: 'translateZ(0)',
+      }}
     >
       {children}
     </motion.div>

@@ -22,28 +22,50 @@ export default function IndustryCard({
   return (
     <motion.div
       whileHover={{ y: -8 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.3,  }}
       className="h-full"
+      style={{
+        willChange: 'transform',
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden',
+        transform: 'translateZ(0)',
+      }}
     >
-      <Card
-        variant="glass-dark"
-        hover={false}
-        className="relative overflow-hidden group h-full"
+      <div
+        style={{
+          backfaceVisibility: 'hidden',
+          WebkitBackfaceVisibility: 'hidden',
+        }}
+        className="h-full"
       >
+        <Card
+          variant="glass-dark"
+          hover={false}
+          className="relative overflow-hidden h-full"
+        >
         {/* Background gradient on hover */}
-        <div
-          className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+        <motion.div
+          className={`absolute inset-0 bg-gradient-to-br ${gradient}`}
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 0.05 }}
+          transition={{ duration: 0.3,  }}
         />
 
         {/* Icon with gradient background */}
         <div className="relative mb-6">
-          <div
-            className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${gradient} bg-opacity-10 border border-white/10 group-hover:scale-110 transition-transform duration-300`}
+          <motion.div
+            className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${gradient} bg-opacity-10 border border-white/10`}
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3,  }}
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
           >
             <div className="text-4xl text-white">
               {icon}
             </div>
-          </div>
+          </motion.div>
 
           {/* Decorative dot grid */}
           <div
@@ -58,9 +80,17 @@ export default function IndustryCard({
         {/* Content */}
         <div className="relative z-10">
           {/* Title */}
-          <h3 className={`text-2xl font-bold mb-3 text-white group-hover:bg-gradient-to-r ${gradient} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300`}>
+          <motion.h3
+            className="text-2xl font-bold mb-3 text-white"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2,  }}
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
+          >
             {title}
-          </h3>
+          </motion.h3>
 
           {/* Description */}
           <p className="text-white/70 leading-relaxed mb-4">
@@ -85,9 +115,15 @@ export default function IndustryCard({
           )}
 
           {/* Bottom gradient line */}
-          <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+          <motion.div
+            className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r ${gradient}`}
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.3,  }}
+          />
         </div>
       </Card>
+      </div>
     </motion.div>
   );
 }

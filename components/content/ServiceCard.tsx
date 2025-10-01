@@ -40,6 +40,12 @@ export default function ServiceCard({
     <motion.div
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
+      style={{
+        willChange: 'transform',
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden',
+        transform: 'translateZ(0)',
+      }}
     >
       <Card
         variant="glass-dark"

@@ -47,7 +47,7 @@ export default function Hero({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: [0.16, 1, 0.3, 1] as const,
       },
     },
@@ -71,6 +71,11 @@ export default function Hero({
         variants={containerVariants}
         initial="hidden"
         animate="visible"
+        style={{
+          backfaceVisibility: 'hidden',
+          WebkitBackfaceVisibility: 'hidden',
+          transform: 'translateZ(0)',
+        }}
       >
         {/* Badge */}
         <motion.div variants={itemVariants} className="mb-8">
@@ -78,6 +83,10 @@ export default function Hero({
             className="inline-flex items-center px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/5 backdrop-blur-sm"
             whileHover={{ scale: 1.05, borderColor: 'rgba(99, 102, 241, 0.5)' }}
             transition={{ duration: 0.2 }}
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
           >
             <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2 animate-pulse" />
             <span className="text-sm font-medium bg-gradient-to-r from-indigo-200 to-purple-200 bg-clip-text text-transparent">
