@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "title": "ExpoStudios - 物理的・デジタル体験の創造",
+    "description": "展示会、ブース、パビリオン、デジタルプラットフォームを設計し、感じられる体験と測定可能な成果を創造します"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "services": "サービス",
+    "portfolio": "ポートフォリオ",
+    "contact": "お問い合わせ",
+    "blog": "ブログ",
+    "dashboard": "ダッシュボード",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "language": "言語"
+  },
+  "hero": {
+    "title": "感じられる体験を創造します",
+    "subtitle": "そして測定可能な成果を",
+    "description": "展示ブースやパビリオンからデジタルプラットフォームやマーケティングまで、オンラインとオフラインの両方で魅了する訪問者フローと体験を設計します",
+    "cta": {
+      "primary": "始めましょう",
+      "secondary": "詳細を見る"
+    }
+  },
+  "services": {
+    "title": "サービス",
+    "subtitle": "お客様のニーズに合わせた包括的なデジタルソリューション",
+    "webDevelopment": {
+      "title": "ウェブ開発",
+      "description": "最先端技術で構築されたカスタムウェブサイトとウェブアプリケーション"
+    },
+    "mobileApps": {
+      "title": "モバイルアプリ",
+      "description": "iOSとAndroid向けのネイティブおよびクロスプラットフォームアプリケーション"
+    },
+    "uiuxDesign": {
+      "title": "UI/UXデザイン",
+      "description": "魅力的なデジタル体験を創造するユーザー中心のデザイン"
+    },
+    "digitalMarketing": {
+      "title": "デジタルマーケティング",
+      "description": "オンラインプレゼンスを拡大する戦略的マーケティングソリューション"
+    },
+    "consulting": {
+      "title": "コンサルティング",
+      "description": "デジタル変革の旅のための専門的なガイダンス"
+    },
+    "maintenance": {
+      "title": "メンテナンス＆サポート",
+      "description": "デジタル資産をスムーズに運用し続けるための継続的なサポート"
+    },
+    "design": {
+      "card": {
+        "title": "クリエイティブデザイン",
+        "subtitle": "魅力的で魅力的な革新的なビジュアル体験"
+      }
+    },
+    "development": {
+      "card": {
+        "title": "技術開発",
+        "subtitle": "精密さと専門知識で構築された最先端のソリューション"
+      }
+    },
+    "innovation": {
+      "title": "イノベーションラボ",
+      "subtitle": "実験的な技術で限界を押し広げる"
+    },
+    "delivery": {
+      "title": "プロジェクトデリバリー",
+      "subtitle": "コンセプトから完成までシームレスな実行"
+    }
+  },
+  "portfolio": {
+    "title": "私たちの作品",
+    "subtitle": "誇りに思う最近のプロジェクト",
+    "viewProject": "プロジェクトを見る",
+    "allProjects": "すべてのプロジェクトを見る"
+  },
+  "about": {
+    "title": "私たちについて",
+    "subtitle": "デジタルイノベーションのパートナー",
+    "mission": "私たちの使命は、成長を促進し、永続的な価値を創造する革新的なデジタルソリューションを通じて企業に力を与えることです。",
+    "teamTitle": "チームメンバー",
+    "teamSubtitle": "お客様の成功に専念する才能あるプロフェッショナル"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "プロジェクトについて話し合いましょう",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "company": "会社名",
+      "subject": "件名",
+      "message": "メッセージ",
+      "submit": "送信",
+      "submitting": "送信中...",
+      "success": "メッセージが正常に送信されました！",
+      "error": "メッセージの送信に失敗しました。もう一度お試しください。"
+    },
+    "info": {
+      "email": "メール",
+      "phone": "電話",
+      "address": "住所",
+      "hours": "営業時間"
+    }
+  },
+  "comingSoon": {
+    "badge": "近日公開"
+  },
+  "expertise": {
+    "title": "専門分野",
+    "items": {
+      "exhibition": "展示デザイン",
+      "digital": "デジタル体験",
+      "interactive": "インタラクティブインスタレーション",
+      "brand": "ブランドアクティベーション",
+      "virtual": "バーチャル＆ARソリューション"
+    }
+  },
+  "process": {
+    "title": "プロセス",
+    "steps": {
+      "research": "リサーチ＆戦略",
+      "design": "クリエイティブデザイン",
+      "production": "制作＆構築",
+      "launch": "ローンチ＆サポート"
+    }
+  },
+  "newsletter": {
+    "title": "最新情報を入手",
+    "subtitle": "最新の洞察のためにニュースレターを購読してください",
+    "placeholder": "メールアドレスを入力",
+    "submit": "購読",
+    "success": "正常に購読されました！",
+    "confirmation": "購読ありがとうございます！確認メールをご確認ください。",
+    "privacy": "私たちはあなたのプライバシーを尊重します。いつでも購読解除できます。"
+  },
+  "footer": {
+    "copyright": "© 2024 ExpoStudios. 全著作権所有。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "sitemap": "サイトマップ",
+    "followUs": "フォローする"
+  },
+  "auth": {
+    "login": {
+      "title": "おかえりなさい",
+      "subtitle": "アカウントにサインイン",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "rememberMe": "ログイン状態を保持",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "submit": "サインイン",
+      "submitting": "サインイン中...",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "signUp": "サインアップ",
+      "error": {
+        "invalid": "メールアドレスまたはパスワードが無効です",
+        "required": "すべてのフィールドを入力してください",
+        "network": "ネットワークエラー。もう一度お試しください。"
+      }
+    },
+    "register": {
+      "title": "アカウントを作成",
+      "subtitle": "今すぐ参加",
+      "fullName": "フルネーム",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "confirmPassword": "パスワードを確認",
+      "terms": "利用規約に同意します",
+      "submit": "サインアップ",
+      "submitting": "アカウント作成中...",
+      "hasAccount": "すでにアカウントをお持ちですか？",
+      "signIn": "サインイン"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "ページが見つかりません",
+      "description": "お探しのページは存在しません。",
+      "button": "ホームへ"
+    },
+    "500": {
+      "title": "サーバーエラー",
+      "description": "私たちの側で何か問題が発生しました。",
+      "button": "もう一度試す"
+    },
+    "maintenance": {
+      "title": "メンテナンス中",
+      "description": "現在メンテナンスを行っています。すぐに戻ります！",
+      "button": "ステータスを確認"
+    }
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "update": "更新",
+    "search": "検索",
+    "filter": "フィルター",
+    "sort": "並べ替え",
+    "actions": "アクション",
+    "yes": "はい",
+    "no": "いいえ",
+    "ok": "OK",
+    "close": "閉じる",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "readMore": "もっと読む",
+    "showLess": "表示を減らす",
+    "learnMore": "詳細を見る",
+    "getStarted": "始める",
+    "viewAll": "すべて見る",
+    "seeMore": "もっと見る",
+    "noResults": "結果が見つかりません"
+  }
+}

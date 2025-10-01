@@ -1,9 +1,12 @@
 "use client";
 
+
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
+export const dynamic = 'force-dynamic';
 
 interface User {
   id: string;
@@ -16,6 +19,22 @@ interface User {
   lastLoginAt?: string;
 }
 
+interface ActivityLog {
+  id: string;
+  userId?: string;
+  user?: {
+    email: string;
+    name?: string;
+  };
+  action: string;
+  entity: string;
+  entityId?: string;
+  details?: string;
+  ipAddress?: string;
+  userAgent?: string;
+  createdAt: string;
+}
+
 export default function EditUserPage({ params }: { params: Promise<{ id: string }> }) {
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -26,7 +45,7 @@ export default function EditUserPage({ params }: { params: Promise<{ id: string 
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [showPasswordReset, setShowPasswordReset] = useState(false);
   const [showActivityLog, setShowActivityLog] = useState(false);
-  const [activityLogs, setActivityLogs] = useState<any[]>([]);
+  const [activityLogs, setActivityLogs] = useState<ActivityLog[]>([]);
   const [exportingData, setExportingData] = useState(false);
   const [sendingResetEmail, setSendingResetEmail] = useState(false);
 
@@ -90,7 +109,14 @@ export default function EditUserPage({ params }: { params: Promise<{ id: string 
   const handleSave = async () => {
     setSaving(true);
     try {
-      const updateData: any = {
+      const updateData: {
+        name: string;
+        email: string;
+        role: string;
+        isActive: boolean;
+        emailVerified: boolean;
+        password?: string;
+      } = {
         name: formData.name,
         email: formData.email,
         role: formData.role,

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLocale } from 'next-intl';
 
 interface ComingSoonProps {
   launchDate?: string;
@@ -10,13 +11,17 @@ interface ComingSoonProps {
 }
 
 export default function ComingSoon({
-  launchDate = "Q1 2025",
-  showNewsletter = true
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  launchDate: _launchDate = "Q1 2025",
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  showNewsletter: _showNewsletter = true
 }: ComingSoonProps) {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [newsletterEnabled, setNewsletterEnabled] = useState(true);
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
 
   useEffect(() => {
     // Check settings including maintenance mode
@@ -331,7 +336,7 @@ export default function ComingSoon({
                 className="text-center mb-8 px-4"
               >
                 <p className="text-sm sm:text-base font-light italic opacity-90" style={{ color: '#8A94A6' }}>
-                  "We craft experiences people can feel and outcomes you can measure"
+                  &quot;We craft experiences people can feel and outcomes you can measure&quot;
                 </p>
               </motion.div>
 
@@ -347,11 +352,11 @@ export default function ComingSoon({
                 </p>
                 <div className="flex items-center justify-center flex-wrap gap-2 text-xs sm:text-sm">
                   <span style={{ color: '#00A6FB' }}>Research & Strategy</span>
-                  <span style={{ color: '#00E5CC' }}>→</span>
+                  <span style={{ color: '#00E5CC' }}>{isRTL ? '←' : '→'}</span>
                   <span style={{ color: '#7C4DFF' }}>Design & Planning</span>
-                  <span style={{ color: '#00E5CC' }}>→</span>
+                  <span style={{ color: '#00E5CC' }}>{isRTL ? '←' : '→'}</span>
                   <span style={{ color: '#00A6FB' }}>Production & Supervision</span>
-                  <span style={{ color: '#00E5CC' }}>→</span>
+                  <span style={{ color: '#00E5CC' }}>{isRTL ? '←' : '→'}</span>
                   <span style={{ color: '#7C4DFF' }}>Launch & Support</span>
                 </div>
               </motion.div>
@@ -411,7 +416,7 @@ export default function ComingSoon({
                     className="text-center mt-4 font-normal"
                     style={{ color: '#00E5CC' }}
                   >
-                    Success! We'll notify you when we launch.
+                    Success! We&apos;ll notify you when we launch.
                   </motion.p>
                 )}
               </motion.form>
@@ -619,7 +624,7 @@ export default function ComingSoon({
             className="text-center text-xs font-normal tracking-wider mt-8 opacity-60"
             style={{ color: '#8A94A6' }}
           >
-            © 2025 EXPOSTUDIOS • CRAFTING TOMORROW'S EXPERIENCES
+            © 2025 EXPOSTUDIOS • CRAFTING TOMORROW&apos;S EXPERIENCES
           </motion.p>
         </motion.div>
       </div>

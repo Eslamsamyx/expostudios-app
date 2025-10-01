@@ -1,9 +1,13 @@
 "use client";
 
+
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+export const dynamic = 'force-dynamic';
 
 interface MediaFile {
   id: string;
@@ -12,6 +16,8 @@ interface MediaFile {
   size: number;
   mimeType: string;
   uploadedAt: string;
+  width?: number;
+  height?: number;
   uploadedBy: {
     name?: string;
     email: string;
@@ -27,6 +33,7 @@ export default function MediaLibraryPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFiles, setSelectedFiles] = useState<string[]>([]);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [copiedUrl, setCopiedUrl] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -110,9 +117,9 @@ export default function MediaLibraryPage() {
     }
   };
 
-  const copyToClipboard = (fileOrUrl: any) => {
+  const copyToClipboard = (fileOrUrl: string | MediaFile) => {
     // Handle both file object and URL string
-    const url = typeof fileOrUrl === 'string' ? fileOrUrl : fileOrUrl.publicUrl || fileOrUrl.url;
+    const url = typeof fileOrUrl === 'string' ? fileOrUrl : fileOrUrl.url;
 
     // Get the full URL with domain
     const fullUrl = window.location.origin + url;
@@ -359,11 +366,15 @@ export default function MediaLibraryPage() {
                   {/* File Preview */}
                   <div className="aspect-square mb-3 rounded-lg overflow-hidden flex items-center justify-center" style={{ background: 'rgba(0, 0, 0, 0.3)' }}>
                     {file.mimeType.startsWith('image/') ? (
-                      <img
-                        src={file.url}
-                        alt={file.filename}
-                        className="w-full h-full object-cover"
-                      />
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={file.url}
+                          alt={file.filename}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
+                        />
+                      </div>
                     ) : (
                       <div className="text-4xl">
                         {getFileIcon(file.mimeType)}
@@ -463,12 +474,14 @@ export default function MediaLibraryPage() {
                         </td>
                         <td className="p-4">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center" style={{ background: 'rgba(0, 0, 0, 0.3)' }}>
+                            <div className="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center relative" style={{ background: 'rgba(0, 0, 0, 0.3)' }}>
                               {file.mimeType.startsWith('image/') ? (
-                                <img
+                                <Image
                                   src={file.url}
                                   alt={file.filename}
-                                  className="w-full h-full object-cover"
+                                  width={48}
+                                  height={48}
+                                  className="object-cover"
                                   loading="lazy"
                                 />
                               ) : (

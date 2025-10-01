@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "title": "ExpoStudios - 물리적·디지털 경험 창조",
+    "description": "전시회, 부스, 파빌리온, 디지털 플랫폼을 설계하여 느낄 수 있는 경험과 측정 가능한 결과를 만듭니다"
+  },
+  "navigation": {
+    "home": "홈",
+    "about": "회사 소개",
+    "services": "서비스",
+    "portfolio": "포트폴리오",
+    "contact": "연락처",
+    "blog": "블로그",
+    "dashboard": "대시보드",
+    "login": "로그인",
+    "logout": "로그아웃",
+    "language": "언어"
+  },
+  "hero": {
+    "title": "느낄 수 있는 경험을 만듭니다",
+    "subtitle": "그리고 측정 가능한 결과를",
+    "description": "전시 부스와 파빌리온에서 디지털 플랫폼과 마케팅까지, 온라인과 오프라인 모두에서 매력적인 방문자 흐름과 경험을 설계합니다",
+    "cta": {
+      "primary": "시작하기",
+      "secondary": "자세히 알아보기"
+    }
+  },
+  "services": {
+    "title": "서비스",
+    "subtitle": "고객의 요구에 맞춘 포괄적인 디지털 솔루션",
+    "webDevelopment": {
+      "title": "웹 개발",
+      "description": "최첨단 기술로 구축된 맞춤형 웹사이트 및 웹 애플리케이션"
+    },
+    "mobileApps": {
+      "title": "모바일 앱",
+      "description": "iOS 및 Android용 네이티브 및 크로스 플랫폼 애플리케이션"
+    },
+    "uiuxDesign": {
+      "title": "UI/UX 디자인",
+      "description": "매력적인 디지털 경험을 만드는 사용자 중심 디자인"
+    },
+    "digitalMarketing": {
+      "title": "디지털 마케팅",
+      "description": "온라인 입지를 확대하는 전략적 마케팅 솔루션"
+    },
+    "consulting": {
+      "title": "컨설팅",
+      "description": "디지털 혁신 여정을 위한 전문가 지도"
+    },
+    "maintenance": {
+      "title": "유지 보수 및 지원",
+      "description": "디지털 자산을 원활하게 운영하기 위한 지속적인 지원"
+    },
+    "design": {
+      "card": {
+        "title": "크리에이티브 디자인",
+        "subtitle": "매력적이고 참여를 유도하는 혁신적인 시각적 경험"
+      }
+    },
+    "development": {
+      "card": {
+        "title": "기술 개발",
+        "subtitle": "정밀함과 전문성으로 구축된 최첨단 솔루션"
+      }
+    },
+    "innovation": {
+      "title": "혁신 연구소",
+      "subtitle": "실험적 기술로 한계를 뛰어넘기"
+    },
+    "delivery": {
+      "title": "프로젝트 전달",
+      "subtitle": "컨셉에서 완성까지 원활한 실행"
+    }
+  },
+  "portfolio": {
+    "title": "우리의 작품",
+    "subtitle": "자랑스러운 최근 프로젝트",
+    "viewProject": "프로젝트 보기",
+    "allProjects": "모든 프로젝트 보기"
+  },
+  "about": {
+    "title": "회사 소개",
+    "subtitle": "디지털 혁신의 파트너",
+    "mission": "우리의 사명은 성장을 촉진하고 지속적인 가치를 창출하는 혁신적인 디지털 솔루션을 통해 비즈니스에 힘을 실어주는 것입니다.",
+    "teamTitle": "팀 소개",
+    "teamSubtitle": "고객의 성공에 헌신하는 재능 있는 전문가들"
+  },
+  "contact": {
+    "title": "연락하기",
+    "subtitle": "프로젝트를 논의해 봅시다",
+    "form": {
+      "name": "이름",
+      "email": "이메일",
+      "phone": "전화",
+      "company": "회사",
+      "subject": "제목",
+      "message": "메시지",
+      "submit": "메시지 보내기",
+      "submitting": "보내는 중...",
+      "success": "메시지가 성공적으로 전송되었습니다!",
+      "error": "메시지 전송에 실패했습니다. 다시 시도해 주세요."
+    },
+    "info": {
+      "email": "이메일",
+      "phone": "전화",
+      "address": "주소",
+      "hours": "영업 시간"
+    }
+  },
+  "comingSoon": {
+    "badge": "곧 출시"
+  },
+  "expertise": {
+    "title": "전문 분야",
+    "items": {
+      "exhibition": "전시 디자인",
+      "digital": "디지털 경험",
+      "interactive": "인터랙티브 설치",
+      "brand": "브랜드 활성화",
+      "virtual": "가상 및 AR 솔루션"
+    }
+  },
+  "process": {
+    "title": "프로세스",
+    "steps": {
+      "research": "연구 및 전략",
+      "design": "크리에이티브 디자인",
+      "production": "제작 및 구축",
+      "launch": "출시 및 지원"
+    }
+  },
+  "newsletter": {
+    "title": "최신 정보 받기",
+    "subtitle": "최신 통찰력을 위해 뉴스레터를 구독하세요",
+    "placeholder": "이메일을 입력하세요",
+    "submit": "구독",
+    "success": "성공적으로 구독되었습니다!",
+    "confirmation": "구독해 주셔서 감사합니다! 확인 이메일을 확인하세요.",
+    "privacy": "우리는 귀하의 개인 정보를 존중합니다. 언제든지 구독을 취소할 수 있습니다."
+  },
+  "footer": {
+    "copyright": "© 2024 ExpoStudios. 모든 권리 보유.",
+    "privacy": "개인정보 보호정책",
+    "terms": "서비스 약관",
+    "sitemap": "사이트맵",
+    "followUs": "팔로우하기"
+  },
+  "auth": {
+    "login": {
+      "title": "환영합니다",
+      "subtitle": "계정에 로그인",
+      "email": "이메일",
+      "password": "비밀번호",
+      "rememberMe": "로그인 상태 유지",
+      "forgotPassword": "비밀번호를 잊으셨나요?",
+      "submit": "로그인",
+      "submitting": "로그인 중...",
+      "noAccount": "계정이 없으신가요?",
+      "signUp": "가입하기",
+      "error": {
+        "invalid": "잘못된 이메일 또는 비밀번호",
+        "required": "모든 필드를 입력해주세요",
+        "network": "네트워크 오류. 다시 시도해 주세요."
+      }
+    },
+    "register": {
+      "title": "계정 만들기",
+      "subtitle": "지금 가입하세요",
+      "fullName": "전체 이름",
+      "email": "이메일",
+      "password": "비밀번호",
+      "confirmPassword": "비밀번호 확인",
+      "terms": "이용약관에 동의합니다",
+      "submit": "가입",
+      "submitting": "계정 생성 중...",
+      "hasAccount": "이미 계정이 있으신가요?",
+      "signIn": "로그인"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "페이지를 찾을 수 없습니다",
+      "description": "찾고 계신 페이지가 존재하지 않습니다.",
+      "button": "홈으로 가기"
+    },
+    "500": {
+      "title": "서버 오류",
+      "description": "우리 측에서 문제가 발생했습니다.",
+      "button": "다시 시도"
+    },
+    "maintenance": {
+      "title": "유지 보수 중",
+      "description": "현재 유지 보수를 수행 중입니다. 곧 돌아오겠습니다!",
+      "button": "상태 확인"
+    }
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공",
+    "confirm": "확인",
+    "cancel": "취소",
+    "save": "저장",
+    "delete": "삭제",
+    "edit": "편집",
+    "update": "업데이트",
+    "search": "검색",
+    "filter": "필터",
+    "sort": "정렬",
+    "actions": "작업",
+    "yes": "예",
+    "no": "아니오",
+    "ok": "확인",
+    "close": "닫기",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "readMore": "더 읽기",
+    "showLess": "간략히 보기",
+    "learnMore": "자세히 알아보기",
+    "getStarted": "시작하기",
+    "viewAll": "모두 보기",
+    "seeMore": "더 보기",
+    "noResults": "결과를 찾을 수 없습니다"
+  }
+}

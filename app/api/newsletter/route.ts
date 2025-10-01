@@ -1,19 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import { prisma } from '@/lib/prisma';
-import { z } from 'zod';
 import { isFeatureEnabled } from '@/lib/settings';
-
-// Validation schema
-const NewsletterSchema = z.object({
-  email: z.string().email('Invalid email address'),
-  source: z.enum(['WEBSITE', 'COMING_SOON', 'CONTACT_FORM', 'SOCIAL_MEDIA', 'REFERRAL', 'OTHER']).optional(),
-  name: z.string().optional(),
-  utmSource: z.string().optional(),
-  utmMedium: z.string().optional(),
-  utmCampaign: z.string().optional(),
-  utmTerm: z.string().optional(),
-  utmContent: z.string().optional(),
-});
+import { newsletterSubscribeSchema } from '@/lib/validations';
+import { createErrorResponse } from '@/lib/errors';
+import { sanitizePlainText, sanitizeEmail } from '@/lib/sanitize';
 
 export async function POST(request: NextRequest) {
   try {
@@ -29,7 +21,13 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     // Validate the request body
-    const validatedData = NewsletterSchema.parse(body);
+    const validatedData = newsletterSubscribeSchema.parse(body);
+
+    // Sanitize inputs
+    validatedData.email = sanitizeEmail(validatedData.email);
+    if (validatedData.name) {
+      validatedData.name = sanitizePlainText(validatedData.name);
+    }
 
     // Get additional tracking information
     const ipAddress = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || '';
@@ -138,25 +136,23 @@ export async function POST(request: NextRequest) {
       { status: 201 }
     );
   } catch (error) {
-    if (error instanceof z.ZodError) {
-      return NextResponse.json(
-        { error: 'Invalid input', details: error.errors },
-        { status: 400 }
-      );
-    }
-
-    console.error('Newsletter subscription error:', error);
-    return NextResponse.json(
-      { error: 'Failed to subscribe to newsletter' },
-      { status: 500 }
-    );
+    return createErrorResponse(error, 'Newsletter POST');
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
-    // This endpoint should be protected in production
-    // For now, we'll allow it for testing
+    // Protect this endpoint - require authentication
+    const session = await getServerSession(authOptions);
+
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    // Only ADMIN and SALES roles can access subscriber list
+    if (!['ADMIN', 'SALES'].includes(session.user.role)) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+    }
 
     const subscribers = await prisma.newsletter.findMany({
       where: { isSubscribed: true },
@@ -181,10 +177,6 @@ export async function GET(request: NextRequest) {
       totalCount,
     });
   } catch (error) {
-    console.error('Error fetching subscribers:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch subscribers' },
-      { status: 500 }
-    );
+    return createErrorResponse(error, 'Newsletter GET');
   }
 }

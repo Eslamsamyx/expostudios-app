@@ -3,7 +3,15 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-async function checkService(name: string, checkFn: () => Promise<boolean>): Promise<any> {
+interface ServiceStatus {
+  name: string;
+  status: 'operational' | 'down';
+  responseTime: number;
+  lastChecked: string;
+  message?: string;
+}
+
+async function checkService(name: string, checkFn: () => Promise<boolean>): Promise<ServiceStatus> {
   const startTime = Date.now();
   try {
     const isHealthy = await checkFn();
@@ -47,7 +55,7 @@ export async function GET() {
     // Check authentication service
     services.push(
       await checkService('Authentication Service', async () => {
-        const session = await getServerSession(authOptions);
+        await getServerSession(authOptions);
         return true;
       }).then(s => ({ ...s, category: 'auth' }))
     );
@@ -80,7 +88,7 @@ export async function GET() {
         category: 'database',
         message: `${databaseStatus.tables} tables available`,
       });
-    } catch (error) {
+    } catch {
       services.push({
         name: 'PostgreSQL Database',
         status: 'down',

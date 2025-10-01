@@ -4,24 +4,6 @@ const prisma = new PrismaClient();
 
 const API_BASE = 'http://localhost:3002';
 
-async function getAuthHeaders() {
-  // Get admin user session by creating a direct session token
-  const admin = await prisma.user.findFirst({
-    where: { role: 'ADMIN' }
-  });
-
-  if (!admin) {
-    throw new Error('No admin user found');
-  }
-
-  // For testing, we'll simulate an authenticated request
-  // In real scenario, you'd use the actual auth token
-  return {
-    'Content-Type': 'application/json',
-    // Note: In production, you'd get this from actual login
-  };
-}
-
 async function testAPIs() {
   console.log('🧪 Testing Article Management APIs\n');
   console.log('='.repeat(50));
@@ -46,7 +28,7 @@ async function testAPIs() {
       const response = await fetch(`${API_BASE}/api/dashboard/admin/articles`);
       console.log(`   Status: ${response.status} ${response.status === 401 ? '✅ (Protected)' : '❌'}`);
     } catch (error) {
-      console.log(`   Error: ${error.message}`);
+      console.log(`   Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
 
     // Test 2: GET single article (without auth - should fail)
@@ -55,7 +37,7 @@ async function testAPIs() {
       const response = await fetch(`${API_BASE}/api/dashboard/admin/articles/${testArticle.id}`);
       console.log(`   Status: ${response.status} ${response.status === 401 ? '✅ (Protected)' : '❌'}`);
     } catch (error) {
-      console.log(`   Error: ${error.message}`);
+      console.log(`   Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
 
     // Test 3: PATCH article (without auth - should fail)
@@ -68,7 +50,7 @@ async function testAPIs() {
       });
       console.log(`   Status: ${response.status} ${response.status === 401 ? '✅ (Protected)' : '❌'}`);
     } catch (error) {
-      console.log(`   Error: ${error.message}`);
+      console.log(`   Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
 
     // Test 4: DELETE article (without auth - should fail)
@@ -79,7 +61,7 @@ async function testAPIs() {
       });
       console.log(`   Status: ${response.status} ${response.status === 401 ? '✅ (Protected)' : '❌'}`);
     } catch (error) {
-      console.log(`   Error: ${error.message}`);
+      console.log(`   Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
 
     // Test with simulated admin access (direct DB operations)

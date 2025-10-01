@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
 export async function GET(
-  request: Request,
+  _request: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -74,7 +74,7 @@ export async function PATCH(
     }
 
     // Prepare update data
-    const updateData: any = { ...body };
+    const updateData: Record<string, unknown> = { ...body };
 
     // Handle status changes
     if (body.status === 'PUBLISHED' && existingArticle.status !== 'PUBLISHED') {
@@ -136,7 +136,7 @@ export async function PATCH(
 }
 
 export async function DELETE(
-  request: Request,
+  _request: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   try {

@@ -140,7 +140,7 @@ async function testArticleFrontend() {
     console.log('✅ Navigation works correctly');
 
   } catch (error) {
-    console.error('\n❌ Test Error:', error.message);
+    console.error('\n❌ Test Error:', error instanceof Error ? error.message : 'Unknown error');
 
     // Take screenshot on error
     await page.screenshot({ path: 'error-screenshot.png' });

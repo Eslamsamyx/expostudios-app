@@ -5,6 +5,9 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+export const dynamic = 'force-dynamic';
+
+
 interface ActivityLog {
   id: string;
   userId?: string;
@@ -15,7 +18,7 @@ interface ActivityLog {
   action: string;
   entity: string;
   entityId?: string;
-  details?: any; // Changed to any since it's JSON
+  details?: string | Record<string, unknown>; // Can be string or structured JSON
   ipAddress?: string;
   userAgent?: string;
   createdAt: string;
@@ -250,15 +253,15 @@ export default function ActivityLogsPage() {
                               {' '}
                               <span>{log.entity.toLowerCase()}</span>
                               {/* Show target user info for User entity operations */}
-                              {log.entity === 'User' && log.details && typeof log.details === 'object' && log.details.targetUser ? (
+                              {log.entity === 'User' && log.details && typeof log.details === 'object' && 'targetUser' in log.details && log.details.targetUser && typeof log.details.targetUser === 'object' && 'email' in log.details.targetUser ? (
                                 <>
                                   {': '}
                                   <span style={{ color: '#C3A355' }}>
-                                    {log.details.targetUser.name || log.details.targetUser.email}
+                                    {'name' in log.details.targetUser && log.details.targetUser.name ? String(log.details.targetUser.name) : String(log.details.targetUser.email)}
                                   </span>
                                   {' '}
                                   <span style={{ color: '#8A94A6' }}>
-                                    ({log.details.targetUser.role})
+                                    ({'role' in log.details.targetUser ? String(log.details.targetUser.role) : 'USER'})
                                   </span>
                                 </>
                               ) : (
@@ -286,11 +289,11 @@ export default function ActivityLogsPage() {
                           <p className="text-sm mt-1" style={{ color: '#8A94A6' }}>
                             {typeof log.details === 'string'
                               ? log.details
-                              : typeof log.details === 'object' && log.details.message
-                                ? log.details.message
-                                : typeof log.details === 'object' && log.details.details
-                                  ? log.details.details
-                                  : typeof log.details === 'object' && log.details.targetUser
+                              : typeof log.details === 'object' && 'message' in log.details && log.details.message
+                                ? String(log.details.message)
+                                : typeof log.details === 'object' && 'details' in log.details && log.details.details
+                                  ? String(log.details.details)
+                                  : typeof log.details === 'object' && 'targetUser' in log.details
                                     ? '' // Don't show details if already displayed above
                                     : JSON.stringify(log.details)}
                           </p>

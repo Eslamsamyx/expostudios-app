@@ -39,7 +39,7 @@ export async function GET() {
     const formattedLeads = leads.map(lead => ({
       id: lead.id,
       email: lead.email,
-      name: lead.newsletter?.name || lead.name,
+      name: lead.newsletter?.name || null,
       phone: lead.phone,
       company: lead.company,
       source: lead.source,

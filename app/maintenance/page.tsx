@@ -83,8 +83,8 @@ export default function MaintenancePage() {
             Under Maintenance
           </h2>
           <p className="text-lg font-light max-w-md mx-auto mb-8" style={{ color: '#8A94A6' }}>
-            We're currently performing scheduled maintenance to improve your experience.
-            We'll be back online shortly.
+            We&apos;re currently performing scheduled maintenance to improve your experience.
+            We&apos;ll be back online shortly.
           </p>
 
           {/* Progress Indicator */}

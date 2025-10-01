@@ -2,12 +2,14 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
+import { createErrorResponse } from "@/lib/errors";
 
 export async function PATCH(
   request: Request,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params;
     const session = await getServerSession(authOptions);
 
     if (!session) {
@@ -46,10 +48,6 @@ export async function PATCH(
 
     return NextResponse.json(updatedSubscriber);
   } catch (error) {
-    console.error("Error updating subscriber:", error);
-    return NextResponse.json(
-      { error: "Failed to update subscriber" },
-      { status: 500 }
-    );
+    return createErrorResponse(error, 'Newsletter Update');
   }
 }

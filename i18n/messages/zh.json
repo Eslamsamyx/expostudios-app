@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "title": "ExpoStudios - 打造实体与数字体验",
+    "description": "我们设计展览、展台、展馆和数字平台，创造可感知的体验和可衡量的成果"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "portfolio": "作品集",
+    "contact": "联系我们",
+    "blog": "博客",
+    "dashboard": "仪表板",
+    "login": "登录",
+    "logout": "退出",
+    "language": "语言"
+  },
+  "hero": {
+    "title": "我们创造可感知的体验",
+    "subtitle": "和可衡量的成果",
+    "description": "从展台和展馆到数字平台和营销，我们设计访客流程和体验，在线上和线下都能吸引观众",
+    "cta": {
+      "primary": "开始",
+      "secondary": "了解更多"
+    }
+  },
+  "services": {
+    "title": "我们的服务",
+    "subtitle": "为您量身定制的全方位数字解决方案",
+    "webDevelopment": {
+      "title": "网站开发",
+      "description": "使用尖端技术构建的定制网站和网络应用程序"
+    },
+    "mobileApps": {
+      "title": "移动应用",
+      "description": "适用于iOS和Android的原生和跨平台移动应用程序"
+    },
+    "uiuxDesign": {
+      "title": "UI/UX设计",
+      "description": "以用户为中心的设计，创造引人入胜的数字体验"
+    },
+    "digitalMarketing": {
+      "title": "数字营销",
+      "description": "战略营销解决方案，拓展您的在线影响力"
+    },
+    "consulting": {
+      "title": "咨询服务",
+      "description": "为您的数字化转型之旅提供专家指导"
+    },
+    "maintenance": {
+      "title": "维护与支持",
+      "description": "持续支持，确保您的数字资产顺畅运行"
+    }
+  },
+  "portfolio": {
+    "title": "我们的作品",
+    "subtitle": "我们引以为豪的近期项目",
+    "viewProject": "查看项目",
+    "allProjects": "查看所有项目"
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "您的数字创新合作伙伴",
+    "mission": "我们的使命是通过创新的数字解决方案赋能企业，推动增长并创造持久价值。",
+    "teamTitle": "认识我们的团队",
+    "teamSubtitle": "才华横溢的专业人士致力于您的成功"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "让我们讨论您的项目",
+    "form": {
+      "name": "姓名",
+      "email": "电子邮件",
+      "phone": "电话",
+      "company": "公司",
+      "subject": "主题",
+      "message": "留言",
+      "submit": "发送消息",
+      "submitting": "发送中...",
+      "success": "消息发送成功！",
+      "error": "发送失败，请重试。"
+    },
+    "info": {
+      "email": "电子邮件",
+      "phone": "电话",
+      "address": "地址",
+      "hours": "营业时间"
+    }
+  },
+  "comingSoon": {
+    "badge": "即将推出"
+  },
+  "expertise": {
+    "title": "我们的专业领域",
+    "items": {
+      "exhibition": "展览设计",
+      "digital": "数字体验",
+      "interactive": "互动装置",
+      "brand": "品牌激活",
+      "virtual": "虚拟和AR解决方案"
+    }
+  },
+  "process": {
+    "title": "我们的流程",
+    "steps": {
+      "research": "研究与策略",
+      "design": "创意设计",
+      "production": "制作与构建",
+      "launch": "发布与支持"
+    }
+  },
+  "services": {
+    "title": "我们的服务",
+    "subtitle": "为您量身定制的全方位数字解决方案",
+    "design": {
+      "card": {
+        "title": "创意设计",
+        "subtitle": "吸引与互动的创新视觉体验"
+      }
+    },
+    "development": {
+      "card": {
+        "title": "技术开发",
+        "subtitle": "精准与专业打造的前沿解决方案"
+      }
+    },
+    "innovation": {
+      "title": "创新实验室",
+      "subtitle": "以实验性技术突破界限"
+    },
+    "delivery": {
+      "title": "项目交付",
+      "subtitle": "从概念到完成的无缝执行"
+    },
+    "webDevelopment": {
+      "title": "网站开发",
+      "description": "使用尖端技术构建的定制网站和网络应用程序"
+    },
+    "mobileApps": {
+      "title": "移动应用",
+      "description": "适用于iOS和Android的原生和跨平台移动应用程序"
+    },
+    "uiuxDesign": {
+      "title": "UI/UX设计",
+      "description": "以用户为中心的设计，创造引人入胜的数字体验"
+    },
+    "digitalMarketing": {
+      "title": "数字营销",
+      "description": "战略营销解决方案，拓展您的在线影响力"
+    },
+    "consulting": {
+      "title": "咨询服务",
+      "description": "为您的数字化转型之旅提供专家指导"
+    },
+    "maintenance": {
+      "title": "维护与支持",
+      "description": "持续支持，确保您的数字资产顺畅运行"
+    }
+  },
+  "newsletter": {
+    "title": "保持更新",
+    "subtitle": "订阅我们的通讯，获取最新见解",
+    "placeholder": "输入您的电子邮件",
+    "submit": "订阅",
+    "success": "订阅成功！",
+    "confirmation": "感谢您的订阅！请查看您的邮箱以确认。",
+    "privacy": "我们尊重您的隐私。随时可以取消订阅。"
+  },
+  "footer": {
+    "copyright": "© 2024 ExpoStudios. 版权所有。",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "sitemap": "网站地图",
+    "followUs": "关注我们"
+  },
+  "auth": {
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录您的账户",
+      "email": "电子邮件",
+      "password": "密码",
+      "rememberMe": "记住我",
+      "forgotPassword": "忘记密码？",
+      "submit": "登录",
+      "submitting": "登录中...",
+      "noAccount": "没有账户？",
+      "signUp": "注册",
+      "error": {
+        "invalid": "无效的电子邮件或密码",
+        "required": "请填写所有字段",
+        "network": "网络错误，请重试。"
+      }
+    },
+    "register": {
+      "title": "创建账户",
+      "subtitle": "立即加入我们",
+      "fullName": "全名",
+      "email": "电子邮件",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "terms": "我同意条款和条件",
+      "submit": "注册",
+      "submitting": "创建账户中...",
+      "hasAccount": "已有账户？",
+      "signIn": "登录"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "页面未找到",
+      "description": "您寻找的页面不存在。",
+      "button": "返回首页"
+    },
+    "500": {
+      "title": "服务器错误",
+      "description": "我们这边出了点问题。",
+      "button": "重试"
+    },
+    "maintenance": {
+      "title": "维护中",
+      "description": "我们正在进行维护，很快就会回来！",
+      "button": "检查状态"
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "confirm": "确认",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "update": "更新",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "actions": "操作",
+    "yes": "是",
+    "no": "否",
+    "ok": "确定",
+    "close": "关闭",
+    "back": "返回",
+    "next": "下一个",
+    "previous": "上一个",
+    "readMore": "阅读更多",
+    "showLess": "显示更少",
+    "learnMore": "了解更多",
+    "getStarted": "开始",
+    "viewAll": "查看全部",
+    "seeMore": "查看更多",
+    "noResults": "未找到结果"
+  }
+}

@@ -3,6 +3,9 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
+import { createUserSchema } from "@/lib/validations";
+import { createErrorResponse } from "@/lib/errors";
+import { sanitizeEmail, sanitizePlainText } from "@/lib/sanitize";
 
 export async function GET() {
   try {
@@ -30,11 +33,7 @@ export async function GET() {
 
     return NextResponse.json(users);
   } catch (error) {
-    console.error("Error fetching users:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch users" },
-      { status: 500 }
-    );
+    return createErrorResponse(error, 'Users GET');
   }
 }
 
@@ -47,30 +46,38 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { email, name, password, role } = body;
+
+    // Validate input with Zod schema
+    const validatedData = createUserSchema.parse(body);
+
+    // Sanitize inputs
+    validatedData.email = sanitizeEmail(validatedData.email);
+    if (validatedData.name) {
+      validatedData.name = sanitizePlainText(validatedData.name);
+    }
 
     // Check if user already exists
     const existingUser = await prisma.user.findUnique({
-      where: { email },
+      where: { email: validatedData.email },
     });
 
     if (existingUser) {
       return NextResponse.json(
         { error: "User with this email already exists" },
-        { status: 400 }
+        { status: 409 } // 409 Conflict is more appropriate
       );
     }
 
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 12);
+    // Hash password with secure rounds (12 is good balance of security/performance)
+    const hashedPassword = await bcrypt.hash(validatedData.password, 12);
 
     // Create user
     const user = await prisma.user.create({
       data: {
-        email,
-        name,
+        email: validatedData.email,
+        name: validatedData.name,
         password: hashedPassword,
-        role,
+        role: validatedData.role || 'USER',
         isActive: true,
         emailVerified: false,
       },
@@ -92,16 +99,12 @@ export async function POST(request: Request) {
         action: 'CREATE',
         entity: 'User',
         entityId: user.id,
-        details: `Created new user: ${email}`,
+        details: { message: `Created new user: ${validatedData.email}`, role: user.role },
       },
     });
 
-    return NextResponse.json(user);
+    return NextResponse.json(user, { status: 201 }); // 201 Created
   } catch (error) {
-    console.error("Error creating user:", error);
-    return NextResponse.json(
-      { error: "Failed to create user" },
-      { status: 500 }
-    );
+    return createErrorResponse(error, 'Users POST');
   }
 }

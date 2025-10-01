@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "title": "ExpoStudios - Physische und Digitale Erlebnisse gestalten",
+    "description": "Wir gestalten Ausstellungen, Messestände, Pavillons und digitale Plattformen, die Erlebnisse schaffen, die man spüren kann und Ergebnisse, die messbar sind"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "dashboard": "Dashboard",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "language": "Sprache"
+  },
+  "hero": {
+    "title": "Wir schaffen Erlebnisse, die man spüren kann",
+    "subtitle": "Und Ergebnisse, die messbar sind",
+    "description": "Von Messeständen und Pavillons bis zu digitalen Plattformen und Marketing, wir gestalten Besucherströme und Erlebnisse, die online und offline begeistern",
+    "cta": {
+      "primary": "Jetzt starten",
+      "secondary": "Mehr erfahren"
+    }
+  },
+  "services": {
+    "title": "Unsere Leistungen",
+    "subtitle": "Umfassende digitale Lösungen, maßgeschneidert für Ihre Bedürfnisse",
+    "webDevelopment": {
+      "title": "Webentwicklung",
+      "description": "Individuelle Websites und Webanwendungen mit modernster Technologie"
+    },
+    "mobileApps": {
+      "title": "Mobile Apps",
+      "description": "Native und plattformübergreifende mobile Anwendungen für iOS und Android"
+    },
+    "uiuxDesign": {
+      "title": "UI/UX Design",
+      "description": "Benutzerzentriertes Design für ansprechende digitale Erlebnisse"
+    },
+    "digitalMarketing": {
+      "title": "Digitales Marketing",
+      "description": "Strategische Marketinglösungen für Ihre Online-Präsenz"
+    },
+    "consulting": {
+      "title": "Beratung",
+      "description": "Expertenberatung für Ihre digitale Transformation"
+    },
+    "maintenance": {
+      "title": "Wartung & Support",
+      "description": "Kontinuierliche Unterstützung für reibungslose digitale Abläufe"
+    }
+  },
+  "portfolio": {
+    "title": "Unsere Arbeiten",
+    "subtitle": "Aktuelle Projekte, auf die wir stolz sind",
+    "viewProject": "Projekt ansehen",
+    "allProjects": "Alle Projekte ansehen"
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Ihr Partner für digitale Innovation",
+    "mission": "Unsere Mission ist es, Unternehmen durch innovative digitale Lösungen zu befähigen, die Wachstum fördern und nachhaltigen Wert schaffen.",
+    "teamTitle": "Unser Team kennenlernen",
+    "teamSubtitle": "Talentierte Fachleute, die sich Ihrem Erfolg widmen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Lassen Sie uns über Ihr Projekt sprechen",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "company": "Unternehmen",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "submitting": "Senden...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "hours": "Geschäftszeiten"
+    }
+  },
+  "comingSoon": {
+    "badge": "Bald verfügbar"
+  },
+  "expertise": {
+    "title": "Unsere Expertise",
+    "items": {
+      "exhibition": "Ausstellungsdesign",
+      "digital": "Digitale Erfahrungen",
+      "interactive": "Interaktive Installationen",
+      "brand": "Markenaktivierung",
+      "virtual": "Virtuelle & AR-Lösungen"
+    }
+  },
+  "process": {
+    "title": "Unser Prozess",
+    "steps": {
+      "research": "Forschung & Strategie",
+      "design": "Kreatives Design",
+      "production": "Produktion & Aufbau",
+      "launch": "Launch & Support"
+    }
+  },
+  "services": {
+    "title": "Unsere Leistungen",
+    "subtitle": "Umfassende digitale Lösungen, maßgeschneidert für Ihre Bedürfnisse",
+    "design": {
+      "card": {
+        "title": "Kreatives Design",
+        "subtitle": "Innovative visuelle Erlebnisse, die fesseln und begeistern"
+      }
+    },
+    "development": {
+      "card": {
+        "title": "Technische Entwicklung",
+        "subtitle": "Hochmoderne Lösungen mit Präzision und Expertise entwickelt"
+      }
+    },
+    "innovation": {
+      "title": "Innovationslabor",
+      "subtitle": "Grenzen überschreiten mit experimentellen Technologien"
+    },
+    "delivery": {
+      "title": "Projektabwicklung",
+      "subtitle": "Nahtlose Umsetzung vom Konzept bis zur Fertigstellung"
+    },
+    "webDevelopment": {
+      "title": "Webentwicklung",
+      "description": "Individuelle Websites und Webanwendungen mit modernster Technologie"
+    },
+    "mobileApps": {
+      "title": "Mobile Apps",
+      "description": "Native und plattformübergreifende mobile Anwendungen für iOS und Android"
+    },
+    "uiuxDesign": {
+      "title": "UI/UX Design",
+      "description": "Benutzerzentriertes Design für ansprechende digitale Erlebnisse"
+    },
+    "digitalMarketing": {
+      "title": "Digitales Marketing",
+      "description": "Strategische Marketinglösungen für Ihre Online-Präsenz"
+    },
+    "consulting": {
+      "title": "Beratung",
+      "description": "Expertenberatung für Ihre digitale Transformation"
+    },
+    "maintenance": {
+      "title": "Wartung & Support",
+      "description": "Kontinuierliche Unterstützung für reibungslose digitale Abläufe"
+    }
+  },
+  "newsletter": {
+    "title": "Bleiben Sie informiert",
+    "subtitle": "Abonnieren Sie unseren Newsletter für aktuelle Einblicke",
+    "placeholder": "Ihre E-Mail eingeben",
+    "submit": "Abonnieren",
+    "success": "Erfolgreich abonniert!",
+    "confirmation": "Vielen Dank für Ihr Abonnement! Überprüfen Sie Ihre E-Mail zur Bestätigung.",
+    "privacy": "Wir respektieren Ihre Privatsphäre. Jederzeit abbestellbar."
+  },
+  "footer": {
+    "copyright": "© 2024 ExpoStudios. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "sitemap": "Sitemap",
+    "followUs": "Folgen Sie uns"
+  },
+  "auth": {
+    "login": {
+      "title": "Willkommen zurück",
+      "subtitle": "Melden Sie sich bei Ihrem Konto an",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "rememberMe": "Angemeldet bleiben",
+      "forgotPassword": "Passwort vergessen?",
+      "submit": "Anmelden",
+      "submitting": "Anmeldung läuft...",
+      "noAccount": "Noch kein Konto?",
+      "signUp": "Registrieren",
+      "error": {
+        "invalid": "Ungültige E-Mail oder Passwort",
+        "required": "Bitte füllen Sie alle Felder aus",
+        "network": "Netzwerkfehler. Bitte versuchen Sie es erneut."
+      }
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "subtitle": "Werden Sie heute Mitglied",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "terms": "Ich stimme den Allgemeinen Geschäftsbedingungen zu",
+      "submit": "Registrieren",
+      "submitting": "Konto wird erstellt...",
+      "hasAccount": "Haben Sie bereits ein Konto?",
+      "signIn": "Anmelden"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Seite nicht gefunden",
+      "description": "Die gesuchte Seite existiert nicht.",
+      "button": "Zur Startseite"
+    },
+    "500": {
+      "title": "Serverfehler",
+      "description": "Bei uns ist etwas schief gelaufen.",
+      "button": "Erneut versuchen"
+    },
+    "maintenance": {
+      "title": "Wartungsmodus",
+      "description": "Wir führen gerade Wartungsarbeiten durch. Wir sind bald wieder da!",
+      "button": "Status prüfen"
+    }
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "update": "Aktualisieren",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "sort": "Sortieren",
+    "actions": "Aktionen",
+    "yes": "Ja",
+    "no": "Nein",
+    "ok": "OK",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "readMore": "Mehr lesen",
+    "showLess": "Weniger anzeigen",
+    "learnMore": "Mehr erfahren",
+    "getStarted": "Jetzt starten",
+    "viewAll": "Alle anzeigen",
+    "seeMore": "Mehr sehen",
+    "noResults": "Keine Ergebnisse gefunden"
+  }
+}

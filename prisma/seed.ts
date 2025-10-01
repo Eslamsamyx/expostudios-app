@@ -75,7 +75,7 @@ async function main() {
       update: {},
       create: {
         email,
-        name: email.split('@')[0].replace('.', ' ').split(' ').map(word =>
+        name: (email.split('@')[0] || email).replace('.', ' ').split(' ').map(word =>
           word.charAt(0).toUpperCase() + word.slice(1)
         ).join(' '),
         source: 'COMING_SOON',

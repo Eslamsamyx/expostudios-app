@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
+import { Prisma } from "@prisma/client";
 
 export async function GET() {
   try {
@@ -100,8 +101,8 @@ export async function PUT(request: Request) {
     for (const [key, value] of Object.entries(body)) {
       const setting = await prisma.settings.upsert({
         where: { key },
-        update: { value },
-        create: { key, value },
+        update: { value: value as Prisma.InputJsonValue },
+        create: { key, value: value as Prisma.InputJsonValue },
       });
       updatedSettings.push(setting);
     }

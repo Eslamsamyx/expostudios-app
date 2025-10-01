@@ -284,3 +284,162 @@ model Media {
   @@index([mimeType])
   @@index([createdAt])
 }
+
+// Project Model for Portfolio Case Studies
+model Project {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+
+  // Bilingual Content
+  titleEn     String
+  titleAr     String
+  descriptionEn String  @db.Text
+  descriptionAr String  @db.Text
+
+  // Project Details
+  industry    String   // Exhibitions, Experience Centers, Government, Retail, Museums
+  services    String[] // Array of services used (CONSULT, CREATE, BUILD, AMPLIFY)
+  client      String?
+  location    String?
+  year        Int?
+
+  // Media
+  coverImage  String
+  gallery     String[] // Array of image URLs
+  videoUrl    String?
+
+  // Metrics & Results
+  metrics     Json?    // { "visitors": 50000, "satisfaction": 95, etc. }
+
+  // Publishing
+  status      ArticleStatus @default(DRAFT)
+  publishedAt DateTime?
+  featuredAt  DateTime?  // If featured on homepage
+  featured    Boolean   @default(false)
+
+  // SEO
+  metaTitleEn String?
+  metaTitleAr String?
+  metaDescriptionEn String?
+  metaDescriptionAr String?
+
+  // Analytics
+  views       Int      @default(0)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+  @@index([status])
+  @@index([industry])
+  @@index([publishedAt])
+  @@index([featured])
+}
+
+// Testimonial Model for Client Quotes
+model Testimonial {
+  id          String   @id @default(cuid())
+
+  // Bilingual Content
+  quoteEn     String   @db.Text
+  quoteAr     String   @db.Text
+
+  // Author Details
+  authorName  String
+  authorTitleEn String
+  authorTitleAr String
+  company     String
+  companyLogoUrl String?
+
+  // Publishing
+  isActive    Boolean  @default(true)
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+
+  // Optional relation to project
+  projectId   String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([isActive])
+  @@index([featured])
+  @@index([order])
+}
+
+// Team Member Model
+model TeamMember {
+  id          String   @id @default(cuid())
+
+  // Bilingual Content
+  nameEn      String
+  nameAr      String
+  roleEn      String
+  roleAr      String
+  bioEn       String   @db.Text
+  bioAr       String   @db.Text
+
+  // Media
+  photoUrl    String
+
+  // Social Links
+  linkedinUrl String?
+  twitterUrl  String?
+
+  // Display
+  isActive    Boolean  @default(true)
+  order       Int      @default(0)
+  department  String?  // CONSULT, CREATE, BUILD, AMPLIFY, LEADERSHIP
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([isActive])
+  @@index([order])
+  @@index([department])
+}
+
+// Package Model for Service Packages
+model Package {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+
+  // Bilingual Content
+  nameEn      String
+  nameAr      String
+  descriptionEn String @db.Text
+  descriptionAr String @db.Text
+
+  // Package Details
+  services    String[] // Array of included services
+  deliverables String[] // Array of deliverables
+  timeline    String?  // e.g., "4-6 weeks"
+
+  // Pricing
+  priceType   String   @default("QUOTE") // FIXED, STARTING_FROM, QUOTE
+  price       Float?
+  currency    String   @default("USD")
+
+  // Features & Highlights
+  highlightsEn String[]
+  highlightsAr String[]
+
+  // Display
+  isActive    Boolean  @default(true)
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+
+  // SEO
+  metaTitleEn String?
+  metaTitleAr String?
+  metaDescriptionEn String?
+  metaDescriptionAr String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+  @@index([isActive])
+  @@index([featured])
+  @@index([order])
+}

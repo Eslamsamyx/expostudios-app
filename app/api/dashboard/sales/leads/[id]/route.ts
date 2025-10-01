@@ -51,9 +51,9 @@ export async function PATCH(
       await prisma.interaction.create({
         data: {
           leadId: params.id,
-          type: 'STATUS_CHANGE',
-          notes: `Status changed to ${status} by ${session.user.email}`,
-          userId: session.user.id,
+          type: 'NOTE',
+          description: `Status changed to ${status} by ${session.user.email}`,
+          createdBy: session.user.id,
         },
       });
     }

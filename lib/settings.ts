@@ -1,11 +1,11 @@
 import { prisma } from "@/lib/prisma";
 
 // Cache settings for performance
-let settingsCache: Record<string, any> = {};
+let settingsCache: Record<string, unknown> = {};
 let cacheTime = 0;
 const CACHE_DURATION = 60000; // 1 minute cache
 
-export async function getSettings(): Promise<Record<string, any>> {
+export async function getSettings(): Promise<Record<string, unknown>> {
   const now = Date.now();
 
   // Return cached settings if still valid
@@ -17,7 +17,7 @@ export async function getSettings(): Promise<Record<string, any>> {
     const settings = await prisma.settings.findMany();
 
     // Convert array to object
-    const settingsObj: Record<string, any> = {};
+    const settingsObj: Record<string, unknown> = {};
     settings.forEach(setting => {
       settingsObj[setting.key] = setting.value;
     });
@@ -47,7 +47,7 @@ export async function getSettings(): Promise<Record<string, any>> {
   }
 }
 
-export async function getSetting(key: string, defaultValue?: any) {
+export async function getSetting(key: string, defaultValue?: unknown) {
   const settings = await getSettings();
   return settings[key] ?? defaultValue;
 }
@@ -58,11 +58,11 @@ export async function isFeatureEnabled(feature: 'newsletter' | 'blog' | 'mainten
 
   switch(feature) {
     case 'newsletter':
-      return settings.enable_newsletter ?? true;
+      return typeof settings.enable_newsletter === 'boolean' ? settings.enable_newsletter : true;
     case 'blog':
-      return settings.enable_blog ?? true;
+      return typeof settings.enable_blog === 'boolean' ? settings.enable_blog : true;
     case 'maintenance':
-      return settings.maintenance_mode ?? false;
+      return typeof settings.maintenance_mode === 'boolean' ? settings.maintenance_mode : false;
     default:
       return false;
   }

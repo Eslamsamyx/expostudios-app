@@ -1,9 +1,12 @@
 "use client";
 
+
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
+export const dynamic = 'force-dynamic';
 
 interface ArticleForm {
   title: string;
@@ -47,7 +50,7 @@ export default function NewArticlePage() {
     }
   }, [status, session, router]);
 
-  const handleInputChange = (field: keyof ArticleForm, value: any) => {
+  const handleInputChange = (field: keyof ArticleForm, value: string | boolean | string[]) => {
     setArticle(prev => ({ ...prev, [field]: value }));
   };
 
@@ -122,7 +125,7 @@ export default function NewArticlePage() {
       });
 
       if (response.ok) {
-        const createdArticle = await response.json();
+        await response.json();
         router.push('/dashboard/writer/articles');
       } else {
         const error = await response.json();

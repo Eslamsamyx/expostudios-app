@@ -13,7 +13,7 @@ export async function GET() {
     });
 
     // Convert to object
-    const settingsObj: Record<string, any> = {};
+    const settingsObj: Record<string, unknown> = {};
     settings.forEach(setting => {
       settingsObj[setting.key] = setting.value;
     });

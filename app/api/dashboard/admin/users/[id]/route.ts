@@ -2,10 +2,13 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
+import { Prisma } from "@prisma/client";
 import bcrypt from "bcryptjs";
+import { updateUserSchema } from "@/lib/validations";
+import { createErrorResponse } from "@/lib/errors";
 
 export async function GET(
-  request: Request,
+  _request: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -38,11 +41,7 @@ export async function GET(
 
     return NextResponse.json(user);
   } catch (error) {
-    console.error("Error fetching user:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch user" },
-      { status: 500 }
-    );
+    return createErrorResponse(error, 'User GET');
   }
 }
 
@@ -59,20 +58,22 @@ export async function PATCH(
     }
 
     const body = await request.json();
-    const { isActive, role, name, email, emailVerified, password } = body;
 
-    // Prepare update data
-    const updateData: any = {
-      ...(isActive !== undefined && { isActive }),
-      ...(role && { role }),
-      ...(name !== undefined && { name }),
-      ...(email && { email }),
-      ...(emailVerified !== undefined && { emailVerified }),
+    // Validate with schema
+    const validatedData = updateUserSchema.parse(body);
+
+    // Prepare update data with proper typing
+    const updateData: Prisma.UserUpdateInput = {
+      ...(validatedData.isActive !== undefined && { isActive: validatedData.isActive }),
+      ...(validatedData.role && { role: validatedData.role }),
+      ...(validatedData.name !== undefined && { name: validatedData.name }),
+      ...(validatedData.email && { email: validatedData.email }),
+      ...(validatedData.emailVerified !== undefined && { emailVerified: validatedData.emailVerified }),
     };
 
     // Hash password if provided
-    if (password) {
-      updateData.password = await bcrypt.hash(password, 12);
+    if (validatedData.password) {
+      updateData.password = await bcrypt.hash(validatedData.password, 12);
     }
 
     const updatedUser = await prisma.user.update({
@@ -106,23 +107,19 @@ export async function PATCH(
             name: updatedUser.name,
             role: updatedUser.role,
           },
-          message: `Updated user: ${updatedUser.email}${password ? ' (password changed)' : ''}`,
+          message: `Updated user: ${updatedUser.email}${validatedData.password ? ' (password changed)' : ''}`,
         },
       },
     });
 
     return NextResponse.json(updatedUser);
   } catch (error) {
-    console.error("Error updating user:", error);
-    return NextResponse.json(
-      { error: "Failed to update user" },
-      { status: 500 }
-    );
+    return createErrorResponse(error, 'User PATCH');
   }
 }
 
 export async function DELETE(
-  request: Request,
+  _request: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -182,10 +179,6 @@ export async function DELETE(
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Error deleting user:", error);
-    return NextResponse.json(
-      { error: "Failed to delete user" },
-      { status: 500 }
-    );
+    return createErrorResponse(error, 'User DELETE');
   }
 }

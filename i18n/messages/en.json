@@ -1,0 +1,660 @@
+{
+  "metadata": {
+    "title": "ExpoStudios - Crafting Physical & Digital Experiences",
+    "description": "We design exhibitions, booths, pavilions, and digital platforms that create experiences people can feel and outcomes you can measure"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "articles": "Articles",
+    "dashboard": "Dashboard",
+    "login": "Login",
+    "logout": "Logout",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "We design experiences that resonate",
+    "subtitle": "And outcomes you can measure",
+    "description": "From exhibition booths and pavilions to digital platforms and marketing, we design visitor flows and experiences that captivate both offline and online",
+    "cta": {
+      "primary": "Get Started",
+      "secondary": "Learn More"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive digital solutions tailored to your needs",
+    "webDevelopment": {
+      "title": "Web Development",
+      "description": "Custom websites and web applications built with cutting-edge technology"
+    },
+    "mobileApps": {
+      "title": "Mobile Apps",
+      "description": "Native and cross-platform mobile applications for iOS and Android"
+    },
+    "uiuxDesign": {
+      "title": "UI/UX Design",
+      "description": "User-centered design that creates engaging digital experiences"
+    },
+    "digitalMarketing": {
+      "title": "Digital Marketing",
+      "description": "Strategic marketing solutions to grow your online presence"
+    },
+    "consulting": {
+      "title": "Consulting",
+      "description": "Expert guidance for your digital transformation journey"
+    },
+    "maintenance": {
+      "title": "Maintenance & Support",
+      "description": "Ongoing support to keep your digital assets running smoothly"
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "Recent projects we're proud of",
+    "viewProject": "View Project",
+    "allProjects": "View All Projects",
+    "filterBy": "Filter By",
+    "allProjects": "All Projects",
+    "featured": "Featured",
+    "services": "Services",
+    "industries": "Industries",
+    "technologies": "Technologies",
+    "year": "Year",
+    "client": "Client",
+    "industry": "Industry",
+    "duration": "Duration",
+    "challenge": "The Challenge",
+    "solution": "Our Solution",
+    "results": "Results",
+    "testimonial": "What They Say",
+    "relatedProjects": "Related Projects",
+    "viewCaseStudy": "View Case Study",
+    "visitWebsite": "Visit Website",
+    "projectsFound": "projects found",
+    "noProjectsFound": "No projects match your filters",
+    "clearFilters": "Clear Filters"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Your partner in digital innovation",
+    "hero": {
+      "title": "Crafting Tomorrow's Experiences",
+      "subtitle": "Today"
+    },
+    "story": {
+      "title": "Our Story",
+      "subtitle": "The journey that shaped who we are",
+      "founded": "Founded",
+      "readMore": "Read Full Story"
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The principles that guide everything we do"
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Talented professionals driving innovation",
+      "viewProfile": "View Full Profile",
+      "expertise": "Expertise",
+      "joinedIn": "Joined in",
+      "filterByDept": "Filter by Department"
+    },
+    "whyChooseUs": {
+      "title": "Why Choose ExpoStudios",
+      "subtitle": "What sets us apart from the rest"
+    },
+    "stats": {
+      "title": "Impact by Numbers",
+      "subtitle": "Measurable success across the globe"
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "subtitle": "Milestones that define our growth",
+      "present": "Present"
+    },
+    "culture": {
+      "title": "Life at ExpoStudios",
+      "subtitle": "A culture that inspires excellence",
+      "approach": "Our Approach",
+      "approachSubtitle": "How we deliver exceptional experiences"
+    },
+    "cta": {
+      "title": "Ready to Create Something Extraordinary?",
+      "subtitle": "Let's bring your vision to life",
+      "button": "Start Your Project",
+      "secondaryButton": "View Our Work"
+    }
+  },
+  "contact": {
+    "title": "Let's Create Together",
+    "subtitle": "Transform your vision into reality",
+    "description": "Whether it's an exhibition booth, experience center, or digital platform, we're here to bring your ideas to life",
+    "hero": {
+      "title": "Start Your Journey",
+      "subtitle": "Let's create something extraordinary",
+      "description": "Share your vision with us and let's explore how we can bring it to life"
+    },
+    "form": {
+      "title": "Tell Us About Your Project",
+      "subtitle": "Fill in the details and we'll get back to you within 24 hours",
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@company.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "company": "Company Name",
+      "companyPlaceholder": "Your Company",
+      "projectType": "Project Type",
+      "projectTypePlaceholder": "Select project type",
+      "projectTypes": {
+        "exhibition": "Exhibition Booth",
+        "pavilion": "Pavilion Design",
+        "experienceCenter": "Experience Center",
+        "museum": "Museum Installation",
+        "retail": "Retail Space",
+        "corporate": "Corporate Event",
+        "digital": "Digital Platform",
+        "marketing": "Marketing Campaign",
+        "other": "Other"
+      },
+      "budget": "Budget Range",
+      "budgetPlaceholder": "Select your budget",
+      "budgetRanges": {
+        "small": "Under $25,000",
+        "medium": "$25,000 - $75,000",
+        "large": "$75,000 - $150,000",
+        "enterprise": "Over $150,000",
+        "flexible": "Flexible"
+      },
+      "timeline": "Project Timeline",
+      "timelinePlaceholder": "When do you need this?",
+      "timelines": {
+        "urgent": "ASAP (1-2 months)",
+        "normal": "Standard (3-4 months)",
+        "flexible": "Flexible (5+ months)",
+        "planning": "Just Planning"
+      },
+      "message": "Project Details",
+      "messagePlaceholder": "Tell us about your vision, goals, and any specific requirements...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Thank you! We've received your message",
+      "successMessage": "Our team will review your project and get back to you within 24 hours.",
+      "error": "Failed to send message",
+      "errorMessage": "Please try again or contact us directly via email.",
+      "required": "Required field",
+      "invalidEmail": "Please enter a valid email address"
+    },
+    "info": {
+      "title": "Contact Information",
+      "subtitle": "Get in touch with us",
+      "email": "Email Us",
+      "emailValue": "hello@expostudios.com",
+      "phone": "Call Us",
+      "phoneValue": "+1 (555) 123-4567",
+      "address": "Visit Us",
+      "addressValue": "123 Design Street, Innovation City, IC 12345",
+      "hours": "Business Hours",
+      "hoursValue": "Mon - Fri: 9:00 AM - 6:00 PM"
+    }
+  },
+  "comingSoon": {
+    "badge": "Coming Soon"
+  },
+  "expertise": {
+    "title": "Our Expertise",
+    "items": {
+      "exhibition": "Exhibition Design",
+      "digital": "Digital Experiences",
+      "interactive": "Interactive Installations",
+      "brand": "Brand Activation",
+      "virtual": "Virtual & AR Solutions"
+    }
+  },
+  "process": {
+    "title": "Our Process",
+    "steps": {
+      "research": "Research & Strategy",
+      "design": "Creative Design",
+      "production": "Production & Build",
+      "launch": "Launch & Support"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Four pillars of excellence",
+    "viewDetails": "View Details",
+    "relatedServices": "Related Services",
+    "ourProcess": "Our Process",
+    "keyBenefits": "Key Benefits",
+    "consult": {
+      "name": "CONSULT",
+      "title": "Strategy & Concept",
+      "tagline": "Strategic Vision & Experience Design",
+      "description": "Transform your vision into actionable strategies with our expert consulting services.",
+      "offerings": [
+        "Discovery & Research",
+        "Narrative & Concept",
+        "Moodboards & Storyboards",
+        "Tender Strategy"
+      ]
+    },
+    "create": {
+      "name": "CREATE",
+      "title": "3D Design & Visualization",
+      "tagline": "Creative Design & Content Production",
+      "description": "Bring your brand to life with stunning visuals, immersive content, and memorable experiences.",
+      "offerings": [
+        "Spatial Design",
+        "3D Visualization",
+        "Renderings & Walkthroughs",
+        "Environmental Graphics"
+      ]
+    },
+    "build": {
+      "name": "BUILD",
+      "title": "Development & Integration",
+      "tagline": "Technical Development & Integration",
+      "description": "Engineer robust, scalable solutions that power exceptional digital and physical experiences.",
+      "offerings": [
+        "Unity & Unreal Development",
+        "Interactive Installations",
+        "AV Systems Integration",
+        "Data Platforms"
+      ]
+    },
+    "amplify": {
+      "name": "AMPLIFY",
+      "title": "Marketing & Growth",
+      "tagline": "Marketing & Growth Strategies",
+      "description": "Maximize your reach and impact with data-driven marketing and audience engagement.",
+      "offerings": [
+        "Brand Identity",
+        "Digital Campaigns",
+        "Web & Mobile",
+        "Social Media & SEO"
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us",
+      "subtitle": "360° design studio: physical spaces, digital experiences, and brand assets",
+      "features": {
+        "creative": {
+          "title": "Complete Design Solutions",
+          "description": "3D spatial design, brand identity, presentations, campaigns, and interactive experiences. All from one studio, all speaking the same visual language."
+        },
+        "quality": {
+          "title": "Production-Ready Deliverables",
+          "description": "Technical drawings, brand guidelines, pitch decks, web builds, and media assets. Everything coordinated and ready for deployment."
+        },
+        "turnkey": {
+          "title": "Consult · Create · Build · Amplify",
+          "description": "Strategy to spatial design to development to marketing. One team that understands space, story, technology, and brand from insight to impact."
+        },
+        "delivery": {
+          "title": "Vendor Coordination",
+          "description": "We supervise delivery so what's built matches what was envisioned, managing timelines, budgets, and technical direction."
+        },
+        "global": {
+          "title": "Measurable Impact",
+          "description": "Track footfall, dwell time, interactions, lead capture, and conversion - we design with KPIs in mind from day one."
+        },
+        "insights": {
+          "title": "Launch & Beyond",
+          "description": "From testing and training to content refresh plans and on-call support, we're with you after the doors open."
+        }
+      }
+    },
+    "process": {
+      "title": "Our Process",
+      "subtitle": "A clear path from insight to impact",
+      "steps": {
+        "concept": {
+          "title": "Research & Strategy",
+          "description": "Stakeholder interviews, audience insights, KPI definition, and narrative development to align goals and craft your story."
+        },
+        "design": {
+          "title": "Design & Planning",
+          "description": "Spatial layouts, technical drawings, visualizations, and production-ready specs coordinated for buildability."
+        },
+        "visualization": {
+          "title": "Production & Development",
+          "description": "Interactive experiences, AV systems, platforms, and media. Tested, trained, and handed over with full documentation."
+        },
+        "fabrication": {
+          "title": "Marketing & Launch",
+          "description": "Campaign toolkits, web, social content, SEO, and performance tracking to maximize visibility and engagement."
+        },
+        "installation": {
+          "title": "Supervision & Coordination",
+          "description": "We manage vendors, schedules, budgets, and on-site technical direction to ensure flawless execution."
+        },
+        "activation": {
+          "title": "Support & Optimization",
+          "description": "Content refresh, monitoring, analytics dashboards, and on-call support. We're with you after launch."
+        }
+      }
+    },
+    "metrics": {
+      "title": "Success by Numbers",
+      "subtitle": "Proven excellence in experiential design",
+      "items": {
+        "exhibitions": {
+          "label": "Exhibitions Delivered",
+          "description": "Successfully completed"
+        },
+        "sqm": {
+          "label": "Square Meters Designed",
+          "description": "Exhibition space created"
+        },
+        "installations": {
+          "label": "Interactive Installations",
+          "description": "Custom experiences"
+        },
+        "awards": {
+          "label": "Design Awards",
+          "description": "Industry recognition"
+        }
+      }
+    },
+    "industries": {
+      "title": "Where We Operate",
+      "subtitle": "Crafting experiences across diverse sectors",
+      "items": {
+        "exhibitions": "Exhibitions & Pavilions",
+        "museums": "Museums & Cultural",
+        "retail": "Retail & Pop-ups",
+        "corporate": "Corporate Showcases",
+        "government": "Government & Public Sector",
+        "education": "Visitor Centers",
+        "hospitality": "Experience Centers",
+        "cultural": "Cultural Spaces"
+      }
+    },
+    "technologies": {
+      "title": "360° Design Capabilities",
+      "subtitle": "Complete toolkit for spatial design, branding, interactive experiences, and content creation",
+      "categories": {
+        "design": "3D & Spatial Design",
+        "fabrication": "Brand & Visual Identity",
+        "interactive": "Interactive & Digital",
+        "installation": "Content & Presentations"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about working with us",
+      "items": {
+        "pricing": {
+          "question": "How do you price your services?",
+          "answer": "We offer modular pricing based on Consult, Create, Build, and Amplify services. Each project receives a custom quote covering design, development, coordination, and marketing needs. Packages start from concept and visualization bundles to full end-to-end delivery with on-site supervision."
+        },
+        "timeline": {
+          "question": "What is the typical project timeline?",
+          "answer": "Timelines vary based on project scope, complexity, and launch requirements. We work backwards from your target date, coordinating design, development, vendor schedules, and testing phases to ensure on-time delivery. During discovery, we'll provide a detailed timeline tailored to your specific project."
+        },
+        "process": {
+          "question": "What does your process involve?",
+          "answer": "We start with discovery (stakeholder interviews, KPI definition), move to design and planning (spatial layouts, technical specs, visualizations), then production (interactive builds, AV systems, content), followed by supervision and support throughout launch."
+        },
+        "support": {
+          "question": "Do you provide on-site supervision?",
+          "answer": "Yes! We coordinate vendors, manage schedules and budgets, provide technical direction during installation, and offer on-site support. After launch, we provide content refresh plans, monitoring, and on-call support."
+        },
+        "revisions": {
+          "question": "How many revisions are included?",
+          "answer": "Typically 2-3 revision rounds per phase to ensure alignment and quality. We iterate at concept, detailed design, and development stages, ensuring what's built matches what was envisioned."
+        },
+        "expertise": {
+          "question": "What services don't you provide?",
+          "answer": "We don't do physical fabrication or civil works. That's handled by venue-appointed contractors. We provide production-ready designs, technical specs, and supervision to ensure seamless execution. Hardware procurement can be included on request."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Create an Unforgettable Experience?",
+      "description": "Let's discuss your next exhibition, installation, or brand activation. Get a free consultation and see how we bring spaces to life.",
+      "primary": "Start Your Project",
+      "secondary": "View Our Portfolio"
+    }
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "subtitle": "Specialized expertise across key sectors",
+    "exhibitions": {
+      "name": "Exhibitions",
+      "description": "Stand out at trade shows and expos with innovative booth designs and interactive experiences"
+    },
+    "experienceCenters": {
+      "name": "Experience Centers",
+      "description": "Create immersive brand experiences that engage visitors and tell your story"
+    },
+    "government": {
+      "name": "Government",
+      "description": "Public sector solutions for visitor centers, museums, and information hubs"
+    },
+    "retail": {
+      "name": "Retail",
+      "description": "Transform retail spaces with digital signage, interactive displays, and customer engagement"
+    },
+    "museums": {
+      "name": "Museums",
+      "description": "Cultural storytelling through interactive exhibits and multimedia installations"
+    },
+    "corporate": {
+      "name": "Corporate",
+      "description": "Enterprise solutions for brand experiences and internal communications"
+    },
+    "education": {
+      "name": "Education",
+      "description": "Interactive learning environments and educational technology solutions"
+    }
+  },
+  "packages": {
+    "title": "Service Packages",
+    "subtitle": "Tailored solutions for every need",
+    "expoEssentials": {
+      "name": "Expo Essentials",
+      "description": "Perfect starter package for exhibition presence",
+      "price": "From $15,000",
+      "features": [
+        "3D booth design & visualization",
+        "Graphic design & branding",
+        "Basic AV integration",
+        "On-site support"
+      ]
+    },
+    "immersiveFeature": {
+      "name": "Immersive Feature",
+      "description": "Premium interactive experience development",
+      "price": "From $50,000",
+      "features": [
+        "Custom interactive development",
+        "Advanced AV systems",
+        "Content production",
+        "Full technical support"
+      ]
+    },
+    "tenderBooster": {
+      "name": "Tender Booster",
+      "description": "Win RFPs with compelling proposals",
+      "price": "From $5,000",
+      "features": [
+        "Tender analysis & strategy",
+        "3D visualizations",
+        "Professional documentation",
+        "Presentation materials"
+      ]
+    }
+  },
+  "stats": {
+    "projects": "Projects Completed",
+    "clients": "Happy Clients",
+    "countries": "Countries Served",
+    "experience": "Years Experience"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Vision?",
+    "subtitle": "Let's create something extraordinary together",
+    "button": "Start Your Project"
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "subtitle": "Subscribe to our newsletter for the latest insights",
+    "placeholder": "Enter your email",
+    "submit": "Subscribe",
+    "success": "Successfully subscribed!",
+    "confirmation": "Thank you for subscribing! Check your email for confirmation.",
+    "privacy": "We respect your privacy. Unsubscribe at any time."
+  },
+  "footer": {
+    "copyright": "© 2024 ExpoStudios. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "sitemap": "Sitemap",
+    "followUs": "Follow Us"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your account",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign In",
+      "submitting": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "error": {
+        "invalid": "Invalid email or password",
+        "required": "Please fill in all fields",
+        "network": "Network error. Please try again."
+      }
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join us today",
+      "fullName": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "terms": "I agree to the Terms and Conditions",
+      "submit": "Sign Up",
+      "submitting": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Lost in the Experience?",
+      "description": "This page doesn't exist... yet. But we can help you find your way back to something extraordinary.",
+      "button": "Go Home",
+      "goBack": "Go Back",
+      "quote": "Every great experience starts with getting a little lost."
+    },
+    "500": {
+      "title": "Something Went Wrong",
+      "description": "We encountered an unexpected error. Our team has been notified and we're working on it.",
+      "button": "Go Home",
+      "retry": "Try Again",
+      "quote": "Even the best experiences have their glitches."
+    },
+    "maintenance": {
+      "title": "Under Maintenance",
+      "description": "We're currently performing maintenance. We'll be back soon!",
+      "button": "Check Status"
+    }
+  },
+  "articles": {
+    "title": "Articles & Insights",
+    "subtitle": "Explore our latest thoughts, insights, and industry expertise",
+    "hero": {
+      "title": "Articles & Insights",
+      "subtitle": "Discover expert insights on exhibitions, experience design, and digital innovation",
+      "searchPlaceholder": "Search articles..."
+    },
+    "featured": {
+      "title": "Featured Articles",
+      "subtitle": "Our most popular and impactful content"
+    },
+    "filters": {
+      "all": "All Articles",
+      "category": "Category",
+      "tag": "Tag",
+      "featured": "Featured Only",
+      "clearFilters": "Clear Filters",
+      "searchPlaceholder": "Search by title or content..."
+    },
+    "card": {
+      "readMore": "Read Article",
+      "minutesRead": "min read",
+      "views": "views",
+      "shares": "shares"
+    },
+    "detail": {
+      "share": "Share Article",
+      "shareOn": "Share on",
+      "copyLink": "Copy Link",
+      "copied": "Copied!",
+      "linkCopied": "Link copied!",
+      "author": "Written by",
+      "publishedOn": "Published on",
+      "lastUpdated": "Last updated",
+      "category": "Category",
+      "tags": "Tags",
+      "relatedArticles": "Related Articles",
+      "relatedArticlesSubtitle": "Continue exploring related topics and insights",
+      "home": "Home",
+      "articles": "Articles",
+      "featured": "Featured",
+      "views": "Views"
+    },
+    "empty": {
+      "title": "No Articles Found",
+      "description": "We couldn't find any articles matching your criteria. Try adjusting your filters or search query.",
+      "button": "Clear Filters"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page",
+      "of": "of"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "update": "Update",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "actions": "Actions",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "readMore": "Read More",
+    "showLess": "Show Less",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "viewAll": "View All",
+    "seeMore": "See More",
+    "noResults": "No results found"
+  }
+}

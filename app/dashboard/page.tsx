@@ -5,6 +5,9 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+export const dynamic = 'force-dynamic';
+
+
 export default function DashboardPage() {
   const { data: session, status } = useSession();
   const router = useRouter();

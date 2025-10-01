@@ -37,7 +37,7 @@ async function testAdminPages() {
         const status = response.status === 401 ? '🔒 Protected (401)' : `Status: ${response.status}`;
         console.log(`   API: ${status}`);
       } catch (error) {
-        console.log(`   API: ❌ Error - ${error.message}`);
+        console.log(`   API: ❌ Error - ${error instanceof Error ? error.message : 'Unknown error'}`);
       }
     }
     console.log();

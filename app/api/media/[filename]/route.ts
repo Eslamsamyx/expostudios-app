@@ -28,10 +28,11 @@ function getMimeType(filename: string): string {
 }
 
 export async function GET(
-  request: NextRequest,
-  { params }: { params: { filename: string } }
+  _request: NextRequest,
+  context: { params: Promise<{ filename: string }> }
 ) {
   try {
+    const params = await context.params;
     const filename = params.filename;
 
     // Basic security check - prevent directory traversal
@@ -49,7 +50,7 @@ export async function GET(
     // Check if file exists
     try {
       await stat(filePath);
-    } catch (error) {
+    } catch {
       return NextResponse.json(
         { error: "File not found" },
         { status: 404 }
@@ -61,7 +62,7 @@ export async function GET(
     const mimeType = getMimeType(filename);
 
     // Create response with proper headers
-    const response = new NextResponse(fileBuffer, {
+    const response = new NextResponse(fileBuffer as BodyInit, {
       status: 200,
       headers: {
         'Content-Type': mimeType,

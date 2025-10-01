@@ -1,267 +1,179 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { HiHome, HiLightningBolt, HiPhotograph, HiMail } from 'react-icons/hi';
 
 export default function NotFound() {
   const router = useRouter();
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth - 0.5) * 20,
-        y: (e.clientY / window.innerHeight - 0.5) * 20,
-      });
-    };
+  const floatingShapes = [
+    { color: '#00A6FB', size: 120, delay: 0, duration: 8, x: -100, y: -50 },
+    { color: '#7C4DFF', size: 100, delay: 0.5, duration: 10, x: 100, y: 80 },
+    { color: '#4A8E55', size: 90, delay: 1, duration: 9, x: -80, y: 100 },
+    { color: '#22D3EE', size: 110, delay: 1.5, duration: 11, x: 120, y: -80 },
+  ];
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  const quickLinks = [
+    { name: 'Home', href: '/en', icon: HiHome },
+    { name: 'Services', href: '/en/services', icon: HiLightningBolt },
+    { name: 'Portfolio', href: '/en/portfolio', icon: HiPhotograph },
+    { name: 'Contact', href: '/en/contact', icon: HiMail },
+  ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#121417' }}>
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        {/* Gradient orbs */}
+    <div className="min-h-screen bg-[var(--dark-bg-primary)] relative overflow-hidden flex items-center justify-center px-4">
+      {/* Animated Background Shapes */}
+      {floatingShapes.map((shape, index) => (
         <motion.div
-          className="absolute top-[20%] left-[15%] w-[500px] h-[500px] rounded-full opacity-20"
+          key={index}
+          className="absolute rounded-full opacity-10"
           style={{
-            background: 'radial-gradient(circle, #C3A355 0%, transparent 70%)',
-            filter: 'blur(100px)',
-            transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)`,
+            width: shape.size,
+            height: shape.size,
+            background: `radial-gradient(circle, ${shape.color} 0%, transparent 70%)`,
+            filter: 'blur(40px)',
           }}
           animate={{
+            x: [shape.x, -shape.x, shape.x],
+            y: [shape.y, -shape.y, shape.y],
             scale: [1, 1.2, 1],
+            rotate: [0, 180, 360],
           }}
           transition={{
-            duration: 8,
+            duration: shape.duration,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: 'easeInOut',
+            delay: shape.delay,
           }}
         />
-        <motion.div
-          className="absolute bottom-[10%] right-[20%] w-[400px] h-[400px] rounded-full opacity-30"
-          style={{
-            background: 'radial-gradient(circle, #4A8E55 0%, transparent 70%)',
-            filter: 'blur(80px)',
-            transform: `translate(${-mousePosition.x * 0.3}px, ${-mousePosition.y * 0.3}px)`,
-          }}
-          animate={{
-            scale: [1.2, 1, 1.2],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+      ))}
 
-        {/* Geometric shapes */}
+      {/* Main Content */}
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
+        {/* 404 Number */}
         <motion.div
-          className="absolute top-[40%] right-[25%]"
-          animate={{
-            rotate: 360,
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear",
-          }}
+          initial={{ scale: 0, rotate: -180 }}
+          animate={{ scale: 1, rotate: 0 }}
+          transition={{ duration: 0.8, ease: [0.34, 1.56, 0.64, 1] }}
+          className="mb-8"
         >
-          <div
-            className="w-32 h-32 border-2 opacity-10"
-            style={{
-              borderColor: '#C3A355',
-              transform: 'rotate(45deg)',
-            }}
-          />
+          <h1 className="text-[150px] md:text-[250px] font-bold leading-none gradient-text-service">
+            404
+          </h1>
         </motion.div>
 
-        <motion.div
-          className="absolute bottom-[30%] left-[30%]"
-          animate={{
-            rotate: -360,
-          }}
-          transition={{
-            duration: 40,
-            repeat: Infinity,
-            ease: "linear",
-          }}
+        {/* Title */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="text-3xl md:text-5xl font-bold text-white mb-4"
         >
-          <div
-            className="w-24 h-24 border-2 opacity-10 rounded-full"
-            style={{
-              borderColor: '#4A8E55',
-            }}
-          />
-        </motion.div>
+          Lost in the Experience?
+        </motion.h2>
 
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `linear-gradient(#C3A355 1px, transparent 1px), linear-gradient(90deg, #C3A355 1px, transparent 1px)`,
-            backgroundSize: '100px 100px',
-          }}
-        />
-      </div>
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="text-xl text-white/70 mb-12 max-w-2xl mx-auto"
+        >
+          This page doesn&apos;t exist... yet. But we can help you find your way back to something extraordinary.
+        </motion.p>
 
-      {/* Content */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-6">
+        {/* Quick Links Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto"
+          transition={{ delay: 0.5 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
         >
-          {/* 404 Number */}
-          <motion.div
-            className="relative mb-8"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h1
-              className="text-[180px] md:text-[220px] font-thin leading-none select-none"
-              style={{
-                background: 'linear-gradient(135deg, #C3A355 0%, #4A8E55 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 0 80px rgba(195, 163, 85, 0.3)',
-              }}
-            >
-              404
-            </h1>
-
-            {/* Glitch effect */}
+          {quickLinks.map((link, index) => (
             <motion.div
-              className="absolute inset-0 flex items-center justify-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 0.5, 0] }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                repeatDelay: 2,
-              }}
+              key={link.name}
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 + index * 0.1 }}
             >
-              <h1
-                className="text-[180px] md:text-[220px] font-thin leading-none select-none"
-                style={{
-                  color: '#4A8E55',
-                  transform: 'translate(2px, -2px)',
-                  opacity: 0.5,
-                }}
+              <Link
+                href={link.href}
+                className="glass-dark rounded-xl p-6 block hover:bg-white/10 transition-all group text-center"
               >
-                404
-              </h1>
+                <div className="flex justify-center mb-3 group-hover:scale-110 transition-transform">
+                  <link.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-white font-medium">{link.name}</div>
+              </Link>
             </motion.div>
-          </motion.div>
-
-          {/* Error Message */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <h2
-              className="text-2xl md:text-3xl font-light tracking-wider mb-4"
-              style={{ color: '#E8ECEF' }}
-            >
-              Page Not Found
-            </h2>
-            <p
-              className="text-lg font-light mb-8 max-w-md mx-auto"
-              style={{ color: '#8A94A6' }}
-            >
-              The page you're looking for seems to have wandered off into the digital void.
-            </p>
-          </motion.div>
-
-          {/* Action Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <button
-              onClick={() => router.push('/')}
-              className="px-8 py-3 rounded-lg font-light transition-all duration-300 hover:scale-105"
-              style={{
-                background: 'linear-gradient(135deg, #C3A355 0%, #4A8E55 100%)',
-                color: '#121417',
-                boxShadow: '0 10px 30px rgba(195, 163, 85, 0.3)',
-              }}
-            >
-              Return Home
-            </button>
-
-            <button
-              onClick={() => router.back()}
-              className="px-8 py-3 rounded-lg font-light transition-all duration-300 hover:scale-105"
-              style={{
-                background: 'rgba(42, 46, 53, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(195, 163, 85, 0.3)',
-                color: '#E8ECEF',
-              }}
-            >
-              Go Back
-            </button>
-          </motion.div>
-
-          {/* Helpful Links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-12 pt-12 border-t"
-            style={{ borderColor: 'rgba(195, 163, 85, 0.2)' }}
-          >
-            <p className="text-sm mb-4" style={{ color: '#8A94A6' }}>
-              Perhaps you were looking for one of these?
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              {['Articles', 'Contact', 'About'].map((link, index) => (
-                <motion.button
-                  key={link}
-                  onClick={() => router.push(`/${link.toLowerCase()}`)}
-                  className="text-sm px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
-                  style={{
-                    background: 'rgba(42, 46, 53, 0.4)',
-                    border: '1px solid rgba(195, 163, 85, 0.2)',
-                    color: '#C3A355',
-                  }}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.9 + index * 0.1 }}
-                  whileHover={{
-                    borderColor: 'rgba(195, 163, 85, 0.5)',
-                    background: 'rgba(42, 46, 53, 0.6)',
-                  }}
-                >
-                  {link}
-                </motion.button>
-              ))}
-            </div>
-          </motion.div>
+          ))}
         </motion.div>
+
+        {/* Action Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <button
+            onClick={() => router.push('/en')}
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg bg-gradient-to-r from-[var(--consult)] to-[var(--amplify)] text-white hover:opacity-90 shadow-lg hover:shadow-xl transition-all"
+          >
+            <svg
+              className="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+            Go Home
+          </button>
+
+          <button
+            onClick={() => router.back()}
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg glass-dark text-white hover:bg-white/10 transition-all"
+          >
+            <svg
+              className="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Go Back
+          </button>
+        </motion.div>
+
+        {/* Easter Egg Message */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="mt-12 text-white/40 text-sm"
+        >
+          &ldquo;Every great experience starts with getting a little lost.&rdquo;
+        </motion.p>
       </div>
 
-      {/* Footer */}
-      <motion.div
-        className="absolute bottom-0 left-0 right-0 p-6 text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1 }}
-      >
-        <p className="text-xs" style={{ color: '#8A94A6' }}>
-          © 2024 ExpoStudios. All rights reserved.
-        </p>
-      </motion.div>
+      {/* Gradient Overlay at Bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--dark-bg-primary)] to-transparent pointer-events-none" />
     </div>
   );
 }

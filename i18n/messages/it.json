@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "title": "ExpoStudios - Creazione di Esperienze Fisiche e Digitali",
+    "description": "Progettiamo mostre, stand, padiglioni e piattaforme digitali che creano esperienze che le persone possono sentire e risultati che puoi misurare"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "portfolio": "Portfolio",
+    "contact": "Contatti",
+    "blog": "Blog",
+    "dashboard": "Dashboard",
+    "login": "Accedi",
+    "logout": "Esci",
+    "language": "Lingua"
+  },
+  "hero": {
+    "title": "Creiamo esperienze che le persone possono sentire",
+    "subtitle": "E risultati che puoi misurare",
+    "description": "Dagli stand fieristici e padiglioni alle piattaforme digitali e marketing, progettiamo flussi di visitatori ed esperienze che catturano online e offline",
+    "cta": {
+      "primary": "Inizia",
+      "secondary": "Scopri di più"
+    }
+  },
+  "services": {
+    "title": "I Nostri Servizi",
+    "subtitle": "Soluzioni digitali complete su misura per le tue esigenze",
+    "webDevelopment": {
+      "title": "Sviluppo Web",
+      "description": "Siti web personalizzati e applicazioni web costruiti con tecnologia all'avanguardia"
+    },
+    "mobileApps": {
+      "title": "App Mobile",
+      "description": "Applicazioni native e multipiattaforma per iOS e Android"
+    },
+    "uiuxDesign": {
+      "title": "Design UI/UX",
+      "description": "Design centrato sull'utente che crea esperienze digitali coinvolgenti"
+    },
+    "digitalMarketing": {
+      "title": "Marketing Digitale",
+      "description": "Soluzioni di marketing strategico per far crescere la tua presenza online"
+    },
+    "consulting": {
+      "title": "Consulenza",
+      "description": "Guida esperta per il tuo percorso di trasformazione digitale"
+    },
+    "maintenance": {
+      "title": "Manutenzione e Supporto",
+      "description": "Supporto continuo per mantenere le tue risorse digitali funzionanti senza problemi"
+    },
+    "design": {
+      "card": {
+        "title": "Design Creativo",
+        "subtitle": "Esperienze visive innovative che catturano e coinvolgono"
+      }
+    },
+    "development": {
+      "card": {
+        "title": "Sviluppo Tecnico",
+        "subtitle": "Soluzioni all'avanguardia costruite con precisione ed esperienza"
+      }
+    },
+    "innovation": {
+      "title": "Laboratorio di Innovazione",
+      "subtitle": "Spingiamo i confini con tecnologie sperimentali"
+    },
+    "delivery": {
+      "title": "Consegna del Progetto",
+      "subtitle": "Esecuzione senza soluzione di continuità dal concetto al completamento"
+    }
+  },
+  "portfolio": {
+    "title": "I Nostri Lavori",
+    "subtitle": "Progetti recenti di cui siamo orgogliosi",
+    "viewProject": "Vedi Progetto",
+    "allProjects": "Vedi Tutti i Progetti"
+  },
+  "about": {
+    "title": "Chi Siamo",
+    "subtitle": "Il tuo partner nell'innovazione digitale",
+    "mission": "La nostra missione è dare potere alle aziende attraverso soluzioni digitali innovative che guidano la crescita e creano valore duraturo.",
+    "teamTitle": "Incontra il Nostro Team",
+    "teamSubtitle": "Professionisti di talento dedicati al tuo successo"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Discutiamo del tuo progetto",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "phone": "Telefono",
+      "company": "Azienda",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "submit": "Invia Messaggio",
+      "submitting": "Invio...",
+      "success": "Messaggio inviato con successo!",
+      "error": "Impossibile inviare il messaggio. Riprova."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Telefono",
+      "address": "Indirizzo",
+      "hours": "Orari di Lavoro"
+    }
+  },
+  "comingSoon": {
+    "badge": "Prossimamente"
+  },
+  "expertise": {
+    "title": "Le Nostre Competenze",
+    "items": {
+      "exhibition": "Design di Esposizioni",
+      "digital": "Esperienze Digitali",
+      "interactive": "Installazioni Interattive",
+      "brand": "Attivazione del Brand",
+      "virtual": "Soluzioni Virtuali e AR"
+    }
+  },
+  "process": {
+    "title": "Il Nostro Processo",
+    "steps": {
+      "research": "Ricerca e Strategia",
+      "design": "Design Creativo",
+      "production": "Produzione e Costruzione",
+      "launch": "Lancio e Supporto"
+    }
+  },
+  "newsletter": {
+    "title": "Rimani Aggiornato",
+    "subtitle": "Iscriviti alla nostra newsletter per le ultime novità",
+    "placeholder": "Inserisci la tua email",
+    "submit": "Iscriviti",
+    "success": "Iscrizione avvenuta con successo!",
+    "confirmation": "Grazie per esserti iscritto! Controlla la tua email per la conferma.",
+    "privacy": "Rispettiamo la tua privacy. Puoi cancellarti in qualsiasi momento."
+  },
+  "footer": {
+    "copyright": "© 2024 ExpoStudios. Tutti i diritti riservati.",
+    "privacy": "Privacy Policy",
+    "terms": "Termini di Servizio",
+    "sitemap": "Mappa del Sito",
+    "followUs": "Seguici"
+  },
+  "auth": {
+    "login": {
+      "title": "Bentornato",
+      "subtitle": "Accedi al tuo account",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Ricordami",
+      "forgotPassword": "Password dimenticata?",
+      "submit": "Accedi",
+      "submitting": "Accesso...",
+      "noAccount": "Non hai un account?",
+      "signUp": "Registrati",
+      "error": {
+        "invalid": "Email o password non valida",
+        "required": "Compila tutti i campi",
+        "network": "Errore di rete. Riprova."
+      }
+    },
+    "register": {
+      "title": "Crea Account",
+      "subtitle": "Unisciti a noi oggi",
+      "fullName": "Nome Completo",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Conferma Password",
+      "terms": "Accetto i Termini e Condizioni",
+      "submit": "Registrati",
+      "submitting": "Creazione account...",
+      "hasAccount": "Hai già un account?",
+      "signIn": "Accedi"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Pagina Non Trovata",
+      "description": "La pagina che stai cercando non esiste.",
+      "button": "Vai alla Home"
+    },
+    "500": {
+      "title": "Errore del Server",
+      "description": "Qualcosa è andato storto da parte nostra.",
+      "button": "Riprova"
+    },
+    "maintenance": {
+      "title": "In Manutenzione",
+      "description": "Stiamo attualmente eseguendo la manutenzione. Torneremo presto!",
+      "button": "Controlla Stato"
+    }
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "confirm": "Conferma",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "update": "Aggiorna",
+    "search": "Cerca",
+    "filter": "Filtra",
+    "sort": "Ordina",
+    "actions": "Azioni",
+    "yes": "Sì",
+    "no": "No",
+    "ok": "OK",
+    "close": "Chiudi",
+    "back": "Indietro",
+    "next": "Avanti",
+    "previous": "Precedente",
+    "readMore": "Leggi di più",
+    "showLess": "Mostra meno",
+    "learnMore": "Scopri di più",
+    "getStarted": "Inizia",
+    "viewAll": "Vedi tutto",
+    "seeMore": "Vedi di più",
+    "noResults": "Nessun risultato trovato"
+  }
+}

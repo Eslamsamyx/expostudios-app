@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { randomBytes } from "crypto";
 
 export async function POST(
-  request: Request,
+  _request: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   try {

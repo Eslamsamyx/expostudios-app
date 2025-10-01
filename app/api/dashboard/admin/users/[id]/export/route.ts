@@ -2,9 +2,10 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
+import { createErrorResponse } from "@/lib/errors";
 
 export async function GET(
-  request: Request,
+  _request: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -42,8 +43,9 @@ export async function GET(
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
-    // Remove sensitive data
-    const { password, ...userData } = user;
+    // Remove sensitive data (password field excluded from response)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { password: _password, ...userData } = user;
 
     // Log the export activity
     await prisma.activityLog.create({
@@ -58,10 +60,6 @@ export async function GET(
 
     return NextResponse.json(userData);
   } catch (error) {
-    console.error("Error exporting user data:", error);
-    return NextResponse.json(
-      { error: "Failed to export user data" },
-      { status: 500 }
-    );
+    return createErrorResponse(error, 'User Export');
   }
 }

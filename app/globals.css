@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors - Service Pillars */
+  --consult: #00A6FB;
+  --create: #7C4DFF;
+  --build: #4A8E55;
+  --amplify: #22D3EE;
+
+  /* Accent Colors */
+  --accent-teal: #00E5CC;
+  --accent-gold: #C3A355;
+  --accent-silver: #E8ECEF;
+
+  /* Role-Based Colors */
+  --role-admin: #C3A355;
+  --role-writer: #4A8E55;
+  --role-sales: #22D3EE;
+  --role-user: #8A94A6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Service Colors */
+  --color-consult: var(--consult);
+  --color-create: var(--create);
+  --color-build: var(--build);
+  --color-amplify: var(--amplify);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Glass Morphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.glass-dark {
+  background: rgba(15, 15, 20, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient Text Utilities */
+.gradient-text-gold {
+  background: linear-gradient(135deg, #E8ECEF 0%, #C3A355 50%, #E8ECEF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-service {
+  background: linear-gradient(135deg, var(--consult) 0%, var(--create) 33%, var(--build) 66%, var(--amplify) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }

@@ -1,9 +1,12 @@
 "use client";
 
+
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
+export const dynamic = 'force-dynamic';
 
 interface Lead {
   id: string;

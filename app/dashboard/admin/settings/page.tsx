@@ -1,16 +1,37 @@
 "use client";
 
+
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+export const dynamic = 'force-dynamic';
+
 interface Setting {
   id: string;
   key: string;
-  value: any;
+  value: Record<string, unknown>;
   description?: string;
   updatedAt: string;
+}
+
+interface SocialLinks {
+  linkedin?: string;
+  instagram?: string;
+  behance?: string;
+  twitter?: string;
+}
+
+interface SettingsState {
+  site_name?: string;
+  site_description?: string;
+  contact_email?: string;
+  social_links?: SocialLinks;
+  enable_newsletter?: boolean;
+  enable_blog?: boolean;
+  maintenance_mode?: boolean;
+  [key: string]: unknown;
 }
 
 export default function SettingsPage() {
@@ -21,7 +42,7 @@ export default function SettingsPage() {
   const [saving, setSaving] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [savingToggle, setSavingToggle] = useState<string | null>(null);
-  const [editedSettings, setEditedSettings] = useState<Record<string, any>>({});
+  const [editedSettings, setEditedSettings] = useState<SettingsState>({});
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -40,7 +61,7 @@ export default function SettingsPage() {
           console.log('Loaded settings from database:', data); // Debug log
           setSettings(data);
           // Initialize edited settings
-          const initial: Record<string, any> = {};
+          const initial: SettingsState = {};
           data.forEach((setting: Setting) => {
             initial[setting.key] = setting.value;
           });
@@ -59,7 +80,7 @@ export default function SettingsPage() {
     }
   }, [session]);
 
-  const handleSettingChange = async (key: string, value: any) => {
+  const handleSettingChange = async (key: string, value: string | boolean | SocialLinks) => {
     // Update local state immediately for UI responsiveness
     setEditedSettings({
       ...editedSettings,
@@ -87,7 +108,7 @@ export default function SettingsPage() {
 
           // Update both states to ensure sync
           setSettings(updatedSettings);
-          const updated: Record<string, any> = {};
+          const updated: SettingsState = {};
           updatedSettings.forEach((setting: Setting) => {
             updated[setting.key] = setting.value;
           });
@@ -134,7 +155,7 @@ export default function SettingsPage() {
         setSettings(updatedSettings);
 
         // Update editedSettings with the saved values to ensure sync
-        const updated: Record<string, any> = {};
+        const updated: SettingsState = {};
         updatedSettings.forEach((setting: Setting) => {
           updated[setting.key] = setting.value;
         });
@@ -237,7 +258,7 @@ export default function SettingsPage() {
                 </label>
                 <input
                   type="text"
-                  value={editedSettings.site_name || ''}
+                  value={(typeof editedSettings.site_name === 'string' ? editedSettings.site_name : '') || ''}
                   onChange={(e) => handleSettingChange('site_name', e.target.value)}
                   className="w-full px-4 py-2 rounded-lg"
                   style={{
@@ -256,7 +277,7 @@ export default function SettingsPage() {
                   Site Description
                 </label>
                 <textarea
-                  value={editedSettings.site_description || ''}
+                  value={(typeof editedSettings.site_description === 'string' ? editedSettings.site_description : '') || ''}
                   onChange={(e) => handleSettingChange('site_description', e.target.value)}
                   rows={3}
                   className="w-full px-4 py-2 rounded-lg"
@@ -277,7 +298,7 @@ export default function SettingsPage() {
                 </label>
                 <input
                   type="email"
-                  value={editedSettings.contact_email || ''}
+                  value={(typeof editedSettings.contact_email === 'string' ? editedSettings.contact_email : '') || ''}
                   onChange={(e) => handleSettingChange('contact_email', e.target.value)}
                   className="w-full px-4 py-2 rounded-lg"
                   style={{
@@ -318,7 +339,7 @@ export default function SettingsPage() {
                   type="url"
                   value={editedSettings.social_links?.linkedin || ''}
                   onChange={(e) => handleSettingChange('social_links', {
-                    ...editedSettings.social_links,
+                    ...(editedSettings.social_links || {}),
                     linkedin: e.target.value,
                   })}
                   placeholder="https://linkedin.com/company/..."
@@ -339,7 +360,7 @@ export default function SettingsPage() {
                   type="url"
                   value={editedSettings.social_links?.instagram || ''}
                   onChange={(e) => handleSettingChange('social_links', {
-                    ...editedSettings.social_links,
+                    ...(editedSettings.social_links || {}),
                     instagram: e.target.value,
                   })}
                   placeholder="https://instagram.com/..."
@@ -360,7 +381,7 @@ export default function SettingsPage() {
                   type="url"
                   value={editedSettings.social_links?.behance || ''}
                   onChange={(e) => handleSettingChange('social_links', {
-                    ...editedSettings.social_links,
+                    ...(editedSettings.social_links || {}),
                     behance: e.target.value,
                   })}
                   placeholder="https://behance.net/..."
@@ -381,7 +402,7 @@ export default function SettingsPage() {
                   type="url"
                   value={editedSettings.social_links?.twitter || ''}
                   onChange={(e) => handleSettingChange('social_links', {
-                    ...editedSettings.social_links,
+                    ...(editedSettings.social_links || {}),
                     twitter: e.target.value,
                   })}
                   placeholder="https://x.com/..."
@@ -527,7 +548,7 @@ export default function SettingsPage() {
           </motion.div>
 
           {/* Last Updated Info */}
-          {settings.length > 0 && (
+          {settings.length > 0 && settings[0] && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

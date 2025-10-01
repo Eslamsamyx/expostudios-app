@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "title": "ExpoStudios - Créer des Expériences Physiques et Numériques",
+    "description": "Nous concevons des expositions, des stands, des pavillons et des plateformes numériques qui créent des expériences que l'on peut ressentir et des résultats mesurables"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "blog": "Blog",
+    "dashboard": "Tableau de bord",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "language": "Langue"
+  },
+  "hero": {
+    "title": "Nous créons des expériences que l'on peut ressentir",
+    "subtitle": "Et des résultats mesurables",
+    "description": "Des stands d'exposition et pavillons aux plateformes numériques et marketing, nous concevons les flux de visiteurs et les expériences qui captivent en ligne et hors ligne",
+    "cta": {
+      "primary": "Commencer",
+      "secondary": "En savoir plus"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions numériques complètes adaptées à vos besoins",
+    "webDevelopment": {
+      "title": "Développement Web",
+      "description": "Sites web et applications web personnalisés avec une technologie de pointe"
+    },
+    "mobileApps": {
+      "title": "Applications Mobiles",
+      "description": "Applications mobiles natives et multi-plateformes pour iOS et Android"
+    },
+    "uiuxDesign": {
+      "title": "Design UI/UX",
+      "description": "Design centré sur l'utilisateur créant des expériences numériques engageantes"
+    },
+    "digitalMarketing": {
+      "title": "Marketing Digital",
+      "description": "Solutions marketing stratégiques pour développer votre présence en ligne"
+    },
+    "consulting": {
+      "title": "Conseil",
+      "description": "Conseils d'experts pour votre parcours de transformation numérique"
+    },
+    "maintenance": {
+      "title": "Maintenance et Support",
+      "description": "Support continu pour maintenir vos actifs numériques en parfait état"
+    }
+  },
+  "portfolio": {
+    "title": "Nos Réalisations",
+    "subtitle": "Projets récents dont nous sommes fiers",
+    "viewProject": "Voir le projet",
+    "allProjects": "Voir tous les projets"
+  },
+  "about": {
+    "title": "À propos de nous",
+    "subtitle": "Votre partenaire en innovation numérique",
+    "mission": "Notre mission est de permettre aux entreprises de prospérer grâce à des solutions numériques innovantes qui stimulent la croissance et créent une valeur durable.",
+    "teamTitle": "Rencontrez notre équipe",
+    "teamSubtitle": "Des professionnels talentueux dédiés à votre succès"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Discutons de votre projet",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "company": "Entreprise",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success": "Message envoyé avec succès!",
+      "error": "Échec de l'envoi du message. Veuillez réessayer."
+    },
+    "info": {
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "hours": "Heures d'ouverture"
+    }
+  },
+  "comingSoon": {
+    "badge": "Bientôt"
+  },
+  "expertise": {
+    "title": "Notre Expertise",
+    "items": {
+      "exhibition": "Design d'exposition",
+      "digital": "Expériences numériques",
+      "interactive": "Installations interactives",
+      "brand": "Activation de marque",
+      "virtual": "Solutions virtuelles et RA"
+    }
+  },
+  "process": {
+    "title": "Notre Processus",
+    "steps": {
+      "research": "Recherche et stratégie",
+      "design": "Design créatif",
+      "production": "Production et construction",
+      "launch": "Lancement et support"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions numériques complètes adaptées à vos besoins",
+    "design": {
+      "card": {
+        "title": "Design Créatif",
+        "subtitle": "Expériences visuelles innovantes qui captivent et engagent"
+      }
+    },
+    "development": {
+      "card": {
+        "title": "Développement Technique",
+        "subtitle": "Solutions de pointe construites avec précision et expertise"
+      }
+    },
+    "innovation": {
+      "title": "Laboratoire d'Innovation",
+      "subtitle": "Repousser les limites avec des technologies expérimentales"
+    },
+    "delivery": {
+      "title": "Livraison de Projet",
+      "subtitle": "Exécution fluide du concept à la réalisation"
+    },
+    "webDevelopment": {
+      "title": "Développement Web",
+      "description": "Sites web et applications web personnalisés avec une technologie de pointe"
+    },
+    "mobileApps": {
+      "title": "Applications Mobiles",
+      "description": "Applications mobiles natives et multi-plateformes pour iOS et Android"
+    },
+    "uiuxDesign": {
+      "title": "Design UI/UX",
+      "description": "Design centré sur l'utilisateur créant des expériences numériques engageantes"
+    },
+    "digitalMarketing": {
+      "title": "Marketing Digital",
+      "description": "Solutions marketing stratégiques pour développer votre présence en ligne"
+    },
+    "consulting": {
+      "title": "Conseil",
+      "description": "Conseils d'experts pour votre parcours de transformation numérique"
+    },
+    "maintenance": {
+      "title": "Maintenance et Support",
+      "description": "Support continu pour maintenir vos actifs numériques en parfait état"
+    }
+  },
+  "newsletter": {
+    "title": "Restez Informé",
+    "subtitle": "Abonnez-vous à notre newsletter pour les dernières informations",
+    "placeholder": "Entrez votre e-mail",
+    "submit": "S'abonner",
+    "success": "Inscription réussie!",
+    "confirmation": "Merci de vous être abonné ! Vérifiez votre e-mail pour confirmation.",
+    "privacy": "Nous respectons votre vie privée. Désabonnez-vous à tout moment."
+  },
+  "footer": {
+    "copyright": "© 2024 ExpoStudios. Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "sitemap": "Plan du site",
+    "followUs": "Suivez-nous"
+  },
+  "auth": {
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous à votre compte",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "rememberMe": "Se souvenir de moi",
+      "forgotPassword": "Mot de passe oublié?",
+      "submit": "Se connecter",
+      "submitting": "Connexion en cours...",
+      "noAccount": "Vous n'avez pas de compte?",
+      "signUp": "S'inscrire",
+      "error": {
+        "invalid": "E-mail ou mot de passe invalide",
+        "required": "Veuillez remplir tous les champs",
+        "network": "Erreur réseau. Veuillez réessayer."
+      }
+    },
+    "register": {
+      "title": "Créer un compte",
+      "subtitle": "Rejoignez-nous aujourd'hui",
+      "fullName": "Nom complet",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "terms": "J'accepte les termes et conditions",
+      "submit": "S'inscrire",
+      "submitting": "Création du compte...",
+      "hasAccount": "Vous avez déjà un compte?",
+      "signIn": "Se connecter"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page non trouvée",
+      "description": "La page que vous recherchez n'existe pas.",
+      "button": "Retour à l'accueil"
+    },
+    "500": {
+      "title": "Erreur serveur",
+      "description": "Quelque chose s'est mal passé de notre côté.",
+      "button": "Réessayer"
+    },
+    "maintenance": {
+      "title": "En maintenance",
+      "description": "Nous effectuons actuellement une maintenance. Nous serons bientôt de retour!",
+      "button": "Vérifier le statut"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "update": "Mettre à jour",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "actions": "Actions",
+    "yes": "Oui",
+    "no": "Non",
+    "ok": "OK",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "readMore": "Lire plus",
+    "showLess": "Afficher moins",
+    "learnMore": "En savoir plus",
+    "getStarted": "Commencer",
+    "viewAll": "Voir tout",
+    "seeMore": "Voir plus",
+    "noResults": "Aucun résultat trouvé"
+  }
+}

@@ -1,9 +1,12 @@
 "use client";
 
+
 import { useSession } from "next-auth/react";
 import { useRouter, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
+export const dynamic = 'force-dynamic';
 
 interface Article {
   id: string;
@@ -455,7 +458,7 @@ export default function EditArticlePage() {
                     </label>
                     <select
                       value={formData.status}
-                      onChange={(e) => setFormData({ ...formData, status: e.target.value as any })}
+                      onChange={(e) => setFormData({ ...formData, status: e.target.value as 'DRAFT' | 'PUBLISHED' | 'ARCHIVED' })}
                       className="w-full px-4 py-2 rounded-lg"
                       style={{
                         background: 'rgba(42, 46, 53, 0.8)',
