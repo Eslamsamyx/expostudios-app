@@ -35,14 +35,40 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+
+  /* Font Smoothing - Cross-Browser */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+
+  /* Improve text rendering */
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
 }
 
-/* Safari Animation Optimization - Hardware Acceleration */
-* {
+/* Cross-Browser Optimizations */
+*,
+*::before,
+*::after {
+  /* Safari Animation Optimization - Hardware Acceleration */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+
+  /* Better box sizing */
+  box-sizing: border-box;
+
+  /* Smooth scrolling anchor links */
+  scroll-behavior: smooth;
+
+  /* Prevent text selection issues on mobile */
+  -webkit-tap-highlight-color: transparent;
+
+  /* Better touch scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
+/* Framer Motion Components - Hardware Acceleration */
 [class*="motion"],
 [data-framer-component-type] {
   will-change: transform, opacity;
@@ -50,6 +76,68 @@ body {
   backface-visibility: hidden;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+
+  /* Smoother animations across browsers */
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  /* Better text size adjustment on mobile */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Better image rendering */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  /* Better image smoothing */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Improved focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--consult);
+  outline-offset: 2px;
+}
+
+/* Remove default focus outline on mouse click but keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Better input rendering across browsers */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent iOS input zoom */
+@media screen and (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
 }
 
 /* Glass Morphism Utilities */
