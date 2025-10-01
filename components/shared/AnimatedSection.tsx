@@ -50,9 +50,9 @@ export default function AnimatedSection({
   const delayedVariants: Variants = {
     ...variants,
     visible: {
-      ...((variants.visible as any) || {}),
+      ...((variants.visible as Record<string, unknown>) || {}),
       transition: {
-        ...((variants.visible as any)?.transition || {}),
+        ...((variants.visible as Record<string, unknown>)?.transition || {}),
         delay,
       },
     },

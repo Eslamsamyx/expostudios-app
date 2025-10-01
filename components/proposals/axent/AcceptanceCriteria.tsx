@@ -205,7 +205,7 @@ export default function AcceptanceCriteria() {
                 Approval Process
               </h4>
               <p className="text-white/70 leading-relaxed text-sm mb-4">
-                Deliverables are considered "accepted" when:
+                Deliverables are considered &ldquo;accepted&rdquo; when:
               </p>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">

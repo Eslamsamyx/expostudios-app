@@ -100,7 +100,7 @@ export default async function ConsultServicePage({
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-white/60 mb-8">
-            Let's discuss how we can bring your vision to life
+            Let us discuss how we can bring your vision to life
           </p>
           <a
             href={`/${locale}/contact`}

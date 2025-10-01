@@ -293,7 +293,7 @@ export const getFeaturedProjects = (): Project[] => {
 };
 
 export const getProjectsByService = (service: string): Project[] => {
-  return projects.filter((project) => project.services.includes(service as any));
+  return projects.filter((project) => project.services.includes(service as Project['services'][number]));
 };
 
 export const getProjectsByIndustry = (industry: string): Project[] => {

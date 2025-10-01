@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import PasswordGate from '@/components/proposals/PasswordGate';
 import ProposalHero from '@/components/proposals/axent/ProposalHero';
 import ExecutiveSummary from '@/components/proposals/axent/ExecutiveSummary';
 import TableOfContents from '@/components/proposals/axent/TableOfContents';
@@ -24,8 +25,13 @@ export const metadata: Metadata = {
 
 export default function AxentProposalPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <PasswordGate
+      password="AXENT2025"
+      title="Axent Proposal"
+      subtitle="This proposal is password protected. Please enter the password to continue."
+    >
+      <div className="min-h-screen">
+        <Header />
 
       {/* Hero - slate-950 to blue-950 */}
       <div className="bg-gradient-to-b from-slate-950 to-blue-950">
@@ -102,7 +108,8 @@ export default function AxentProposalPage() {
         <Governance />
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </PasswordGate>
   );
 }

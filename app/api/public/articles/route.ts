@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
     const featured = searchParams.get('featured') === 'true';
 
     // Build where clause
-    const where: any = {
+    const where: Record<string, unknown> = {
       status: 'PUBLISHED',
     };
 

@@ -11,6 +11,7 @@ import Button from './ui/Button';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import { motion } from 'framer-motion';
+import { HiOfficeBuilding, HiLightBulb, HiShieldCheck, HiShoppingCart, HiAcademicCap } from 'react-icons/hi';
 
 export default function HomePage() {
   const t = useTranslations();
@@ -87,11 +88,31 @@ export default function HomePage() {
   ];
 
   const industries = [
-    { key: 'exhibitions', image: '/images/industries/exhibitions.jpg' },
-    { key: 'experienceCenters', image: '/images/industries/experience-centers.jpg' },
-    { key: 'government', image: '/images/industries/government.jpg' },
-    { key: 'retail', image: '/images/industries/retail.jpg' },
-    { key: 'museums', image: '/images/industries/museums.jpg' },
+    {
+      key: 'exhibitions',
+      icon: <HiOfficeBuilding />,
+      gradient: 'from-blue-500 to-indigo-600'
+    },
+    {
+      key: 'experienceCenters',
+      icon: <HiLightBulb />,
+      gradient: 'from-purple-500 to-pink-600'
+    },
+    {
+      key: 'government',
+      icon: <HiShieldCheck />,
+      gradient: 'from-emerald-500 to-teal-600'
+    },
+    {
+      key: 'retail',
+      icon: <HiShoppingCart />,
+      gradient: 'from-orange-500 to-red-600'
+    },
+    {
+      key: 'museums',
+      icon: <HiAcademicCap />,
+      gradient: 'from-yellow-500 to-amber-600'
+    },
   ];
 
   return (
@@ -201,8 +222,8 @@ export default function HomePage() {
                 <IndustryCard
                   title={t(`industries.${industry.key}.name`)}
                   description={t(`industries.${industry.key}.description`)}
-                  image={industry.image}
-                  onClick={() => router.push(`/${locale}/industries/${industry.key}`)}
+                  icon={industry.icon}
+                  gradient={industry.gradient}
                 />
               </motion.div>
             ))}
