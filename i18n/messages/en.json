@@ -628,6 +628,10 @@
       "of": "of"
     }
   },
+  "calculator": {
+    "title": "Price Calculator | Expo Studios",
+    "description": "Calculate your video production costs with our intelligent pricing calculator. Get instant estimates for CGI, VFX, SFX, and motion graphics projects."
+  },
   "common": {
     "loading": "Loading...",
     "error": "Error",

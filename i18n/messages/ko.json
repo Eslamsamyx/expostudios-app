@@ -13,7 +13,8 @@
     "dashboard": "대시보드",
     "login": "로그인",
     "logout": "로그아웃",
-    "language": "언어"
+    "language": "언어",
+    "articles": "아티클"
   },
   "hero": {
     "title": "느낄 수 있는 경험을 만듭니다",
@@ -70,20 +71,280 @@
     "delivery": {
       "title": "프로젝트 전달",
       "subtitle": "컨셉에서 완성까지 원활한 실행"
+    },
+    "viewDetails": "상세 보기",
+    "relatedServices": "관련 서비스",
+    "ourProcess": "프로세스",
+    "keyBenefits": "핵심 이점",
+    "consult": {
+      "name": "컨설팅",
+      "title": "전략 & 컨셉",
+      "tagline": "전략적 비전 & 경험 디자인",
+      "description": "전문 컨설팅 서비스를 통해 비전을 실행 가능한 전략으로 전환합니다.",
+      "offerings": [
+        "조사 & 리서치",
+        "내러티브 & 컨셉",
+        "무드보드 & 스토리보드",
+        "입찰 전략"
+      ]
+    },
+    "create": {
+      "name": "제작",
+      "title": "3D 디자인 & 비주얼라이제이션",
+      "tagline": "크리에이티브 디자인 & 콘텐츠 제작",
+      "description": "놀라운 비주얼, 몰입형 콘텐츠, 기억에 남는 경험으로 브랜드에 생명을 불어넣습니다.",
+      "offerings": [
+        "공간 디자인",
+        "3D 비주얼라이제이션",
+        "렌더링 & 워크스루",
+        "환경 그래픽"
+      ]
+    },
+    "build": {
+      "name": "구축",
+      "title": "개발 & 통합",
+      "tagline": "기술 개발 & 통합",
+      "description": "탁월한 디지털 및 물리적 경험을 실현하는 견고하고 확장 가능한 솔루션을 엔지니어링합니다.",
+      "offerings": [
+        "Unity & Unreal 개발",
+        "인터랙티브 설치",
+        "AV 시스템 통합",
+        "데이터 플랫폼"
+      ]
+    },
+    "amplify": {
+      "name": "증폭",
+      "title": "마케팅 & 성장",
+      "tagline": "마케팅 & 성장 전략",
+      "description": "데이터 기반 마케팅과 청중 참여를 통해 도달 범위와 영향력을 극대화합니다.",
+      "offerings": [
+        "브랜드 아이덴티티",
+        "디지털 캠페인",
+        "웹 & 모바일",
+        "소셜 미디어 & SEO"
+      ]
+    },
+    "whyChooseUs": {
+      "title": "선택 이유",
+      "subtitle": "360° 디자인 스튜디오: 물리적 공간, 디지털 경험, 브랜드 자산",
+      "features": {
+        "creative": {
+          "title": "통합 디자인 솔루션",
+          "description": "3D 공간 디자인, 브랜드 아이덴티티, 프레젠테이션, 캠페인, 인터랙티브 경험. 하나의 스튜디오에서 모두 동일한 시각적 언어로 제공합니다."
+        },
+        "quality": {
+          "title": "제작 준비 완료 결과물",
+          "description": "기술 도면, 브랜드 가이드라인, 피치 덱, 웹 빌드, 미디어 자산. 모든 것이 조율되고 배포 준비가 완료되었습니다."
+        },
+        "turnkey": {
+          "title": "컨설팅 · 제작 · 구축 · 증폭",
+          "description": "전략부터 공간 디자인, 개발, 마케팅까지. 인사이트부터 임팩트까지 공간, 스토리, 기술, 브랜드를 이해하는 하나의 팀."
+        },
+        "delivery": {
+          "title": "벤더 조율",
+          "description": "구축된 것이 구상된 것과 일치하도록 배송을 감독하며, 일정, 예산, 기술 방향을 관리합니다."
+        },
+        "global": {
+          "title": "측정 가능한 임팩트",
+          "description": "방문자 수, 체류 시간, 인터랙션, 리드 확보, 전환율 추적 - 첫날부터 KPI를 염두에 두고 설계합니다."
+        },
+        "insights": {
+          "title": "런칭 & 그 이후",
+          "description": "테스트와 교육부터 콘텐츠 갱신 계획과 상시 지원까지, 오픈 후에도 함께합니다."
+        }
+      }
+    },
+    "process": {
+      "title": "프로세스",
+      "subtitle": "인사이트에서 임팩트까지 명확한 경로",
+      "steps": {
+        "concept": {
+          "title": "리서치 & 전략",
+          "description": "이해관계자 인터뷰, 청중 인사이트, KPI 정의, 내러티브 개발을 통해 목표를 정렬하고 스토리를 구성합니다."
+        },
+        "design": {
+          "title": "디자인 & 기획",
+          "description": "공간 레이아웃, 기술 도면, 비주얼라이제이션, 제작 준비 사양을 구축 가능성에 맞게 조율합니다."
+        },
+        "visualization": {
+          "title": "제작 & 개발",
+          "description": "인터랙티브 경험, AV 시스템, 플랫폼, 미디어. 테스트, 교육 완료되고 전체 문서와 함께 인계됩니다."
+        },
+        "fabrication": {
+          "title": "마케팅 & 런칭",
+          "description": "캠페인 툴킷, 웹, 소셜 콘텐츠, SEO, 성과 추적으로 가시성과 참여를 극대화합니다."
+        },
+        "installation": {
+          "title": "감독 & 조율",
+          "description": "완벽한 실행을 위해 벤더, 일정, 예산, 현장 기술 지원을 관리합니다."
+        },
+        "activation": {
+          "title": "지원 & 최적화",
+          "description": "콘텐츠 갱신, 모니터링, 분석 대시보드, 상시 지원. 런칭 후에도 함께합니다."
+        }
+      }
+    },
+    "metrics": {
+      "title": "숫자로 보는 성공",
+      "subtitle": "경험 디자인의 입증된 우수성",
+      "items": {
+        "exhibitions": {
+          "label": "전시회 전달",
+          "description": "성공적으로 완료"
+        },
+        "sqm": {
+          "label": "설계된 제곱미터",
+          "description": "조성된 전시 공간"
+        },
+        "installations": {
+          "label": "인터랙티브 설치",
+          "description": "맞춤형 경험"
+        },
+        "awards": {
+          "label": "디자인 어워드",
+          "description": "업계 인정"
+        }
+      }
+    },
+    "industries": {
+      "title": "운영 분야",
+      "subtitle": "다양한 분야에서 경험 창조",
+      "items": {
+        "exhibitions": "전시회 & 파빌리온",
+        "museums": "박물관 & 문화",
+        "retail": "리테일 & 팝업",
+        "corporate": "기업 쇼케이스",
+        "government": "정부 & 공공 부문",
+        "education": "방문자 센터",
+        "hospitality": "경험 센터",
+        "cultural": "문화 공간"
+      }
+    },
+    "technologies": {
+      "title": "360° 디자인 역량",
+      "subtitle": "공간 디자인, 브랜딩, 인터랙티브 경험, 콘텐츠 제작을 위한 완전한 툴킷",
+      "categories": {
+        "design": "3D & 공간 디자인",
+        "fabrication": "브랜드 & 시각적 아이덴티티",
+        "interactive": "인터랙티브 & 디지털",
+        "installation": "콘텐츠 & 프레젠테이션"
+      }
+    },
+    "faq": {
+      "title": "자주 묻는 질문",
+      "subtitle": "저희와 함께 일하는 데 필요한 모든 것",
+      "items": {
+        "pricing": {
+          "question": "서비스 가격은 어떻게 책정되나요?",
+          "answer": "컨설팅, 제작, 구축, 증폭 서비스를 기반으로 모듈식 가격을 제공합니다. 각 프로젝트는 디자인, 개발, 조율, 마케팅 요구사항을 포괄하는 맞춤형 견적을 받습니다. 패키지는 컨셉 및 비주얼라이제이션 번들부터 현장 감독을 포함한 전체 엔드투엔드 배송까지 시작됩니다."
+        },
+        "timeline": {
+          "question": "일반적인 프로젝트 일정은 어떻게 되나요?",
+          "answer": "일정은 프로젝트 범위, 복잡성, 런칭 요구사항에 따라 달라집니다. 목표 날짜로부터 역산하여 디자인, 개발, 벤더 일정, 테스트 단계를 조율하여 정시 배송을 보장합니다. 조사 단계에서 특정 프로젝트에 맞춤화된 상세 일정을 제공합니다."
+        },
+        "process": {
+          "question": "프로세스는 무엇으로 구성되나요?",
+          "answer": "조사(이해관계자 인터뷰, KPI 정의)로 시작하여 디자인 및 기획(공간 레이아웃, 기술 사양, 비주얼라이제이션)으로 이동한 다음 제작(인터랙티브 빌드, AV 시스템, 콘텐츠)으로 이어지며 런칭 전반에 걸쳐 감독과 지원이 뒤따릅니다."
+        },
+        "support": {
+          "question": "현장 감독을 제공하나요?",
+          "answer": "네! 벤더를 조율하고, 일정과 예산을 관리하며, 설치 중 기술 지원을 제공하고, 현장 지원을 제공합니다. 런칭 후에는 콘텐츠 갱신 계획, 모니터링, 상시 지원을 제공합니다."
+        },
+        "revisions": {
+          "question": "수정은 몇 번 포함되나요?",
+          "answer": "일반적으로 단계별로 2-3회의 수정 라운드를 제공하여 정렬과 품질을 보장합니다. 컨셉, 상세 디자인, 개발 단계에서 반복하여 구축된 것이 구상된 것과 일치하도록 합니다."
+        },
+        "expertise": {
+          "question": "제공하지 않는 서비스는 무엇인가요?",
+          "answer": "물리적 제작이나 토목 공사는 하지 않습니다. 이는 장소 지정 계약자가 처리합니다. 제작 준비가 완료된 디자인, 기술 사양, 감독을 제공하여 원활한 실행을 보장합니다. 하드웨어 조달은 요청 시 포함될 수 있습니다."
+        }
+      }
+    },
+    "cta": {
+      "title": "잊을 수 없는 경험을 만들 준비가 되셨나요?",
+      "description": "다음 전시회, 설치, 브랜드 활성화에 대해 논의해 봅시다. 무료 상담을 받고 공간을 어떻게 생생하게 만드는지 확인하세요.",
+      "primary": "프로젝트 시작하기",
+      "secondary": "포트폴리오 보기"
     }
   },
   "portfolio": {
     "title": "우리의 작품",
     "subtitle": "자랑스러운 최근 프로젝트",
     "viewProject": "프로젝트 보기",
-    "allProjects": "모든 프로젝트 보기"
+    "allProjects": "모든 프로젝트 보기",
+    "filterBy": "필터링 기준",
+    "featured": "추천",
+    "services": "서비스",
+    "industries": "산업",
+    "technologies": "기술",
+    "year": "연도",
+    "client": "고객사",
+    "industry": "산업",
+    "duration": "기간",
+    "challenge": "과제",
+    "solution": "솔루션",
+    "results": "결과",
+    "testimonial": "고객 평가",
+    "relatedProjects": "관련 프로젝트",
+    "viewCaseStudy": "사례 연구 보기",
+    "visitWebsite": "웹사이트 방문",
+    "projectsFound": "개의 프로젝트 발견",
+    "noProjectsFound": "필터와 일치하는 프로젝트가 없습니다",
+    "clearFilters": "필터 초기화"
   },
   "about": {
     "title": "회사 소개",
     "subtitle": "디지털 혁신의 파트너",
     "mission": "우리의 사명은 성장을 촉진하고 지속적인 가치를 창출하는 혁신적인 디지털 솔루션을 통해 비즈니스에 힘을 실어주는 것입니다.",
     "teamTitle": "팀 소개",
-    "teamSubtitle": "고객의 성공에 헌신하는 재능 있는 전문가들"
+    "teamSubtitle": "고객의 성공에 헌신하는 재능 있는 전문가들",
+    "hero": {
+      "title": "내일의 경험을 창조합니다",
+      "subtitle": "오늘"
+    },
+    "story": {
+      "title": "우리의 이야기",
+      "subtitle": "우리를 만든 여정",
+      "founded": "설립",
+      "readMore": "전체 이야기 읽기"
+    },
+    "values": {
+      "title": "우리의 가치",
+      "subtitle": "우리가 하는 모든 것을 이끄는 원칙"
+    },
+    "team": {
+      "title": "팀 소개",
+      "subtitle": "혁신을 주도하는 재능 있는 전문가들",
+      "viewProfile": "전체 프로필 보기",
+      "expertise": "전문 분야",
+      "joinedIn": "입사",
+      "filterByDept": "부서별 필터링"
+    },
+    "whyChooseUs": {
+      "title": "ExpoStudios를 선택하는 이유",
+      "subtitle": "차별화 요소"
+    },
+    "stats": {
+      "title": "숫자로 보는 임팩트",
+      "subtitle": "전 세계적으로 측정 가능한 성공"
+    },
+    "timeline": {
+      "title": "우리의 여정",
+      "subtitle": "성장을 정의하는 이정표",
+      "present": "현재"
+    },
+    "culture": {
+      "title": "ExpoStudios에서의 삶",
+      "subtitle": "우수성을 고취하는 문화",
+      "approach": "접근 방식",
+      "approachSubtitle": "탁월한 경험을 제공하는 방법"
+    },
+    "cta": {
+      "title": "특별한 것을 만들 준비가 되셨나요?",
+      "subtitle": "비전을 현실로 만들어 봅시다",
+      "button": "프로젝트 시작하기",
+      "secondaryButton": "작품 보기"
+    }
   },
   "contact": {
     "title": "연락하기",
@@ -98,13 +359,66 @@
       "submit": "메시지 보내기",
       "submitting": "보내는 중...",
       "success": "메시지가 성공적으로 전송되었습니다!",
-      "error": "메시지 전송에 실패했습니다. 다시 시도해 주세요."
+      "error": "메시지 전송에 실패했습니다. 다시 시도해 주세요.",
+      "title": "프로젝트에 대해 알려주세요",
+      "subtitle": "세부 사항을 입력하시면 24시간 내에 연락드리겠습니다",
+      "namePlaceholder": "홍길동",
+      "emailPlaceholder": "hong@company.com",
+      "phonePlaceholder": "+82 10-0000-0000",
+      "companyPlaceholder": "귀하의 회사",
+      "projectType": "프로젝트 유형",
+      "projectTypePlaceholder": "프로젝트 유형 선택",
+      "projectTypes": {
+        "exhibition": "전시 부스",
+        "pavilion": "파빌리온 디자인",
+        "experienceCenter": "경험 센터",
+        "museum": "박물관 설치",
+        "retail": "리테일 공간",
+        "corporate": "기업 이벤트",
+        "digital": "디지털 플랫폼",
+        "marketing": "마케팅 캠페인",
+        "other": "기타"
+      },
+      "budget": "예산 범위",
+      "budgetPlaceholder": "예산 선택",
+      "budgetRanges": {
+        "small": "$25,000 미만",
+        "medium": "$25,000 - $75,000",
+        "large": "$75,000 - $150,000",
+        "enterprise": "$150,000 이상",
+        "flexible": "유연"
+      },
+      "timeline": "프로젝트 일정",
+      "timelinePlaceholder": "언제 필요하신가요?",
+      "timelines": {
+        "urgent": "긴급 (1-2개월)",
+        "normal": "표준 (3-4개월)",
+        "flexible": "유연 (5개월 이상)",
+        "planning": "계획 단계"
+      },
+      "messagePlaceholder": "비전, 목표, 특정 요구사항에 대해 알려주세요...",
+      "successMessage": "저희 팀이 프로젝트를 검토하고 24시간 내에 연락드리겠습니다.",
+      "errorMessage": "다시 시도하거나 이메일로 직접 연락해 주세요.",
+      "required": "필수 입력 항목",
+      "invalidEmail": "유효한 이메일 주소를 입력해 주세요"
     },
     "info": {
       "email": "이메일",
       "phone": "전화",
       "address": "주소",
-      "hours": "영업 시간"
+      "hours": "영업 시간",
+      "title": "연락처 정보",
+      "subtitle": "문의하기",
+      "emailValue": "hello@expostudios.com",
+      "phoneValue": "+1 (555) 123-4567",
+      "addressValue": "123 Design Street, Innovation City, IC 12345",
+      "hoursValue": "월 - 금: 오전 9:00 - 오후 6:00"
+    },
+    "description": "전시 부스, 경험 센터, 디지털 플랫폼 등 귀하의 아이디어를 현실로 만들어 드립니다",
+    "hero": {
+      "title": "여정을 시작하세요",
+      "subtitle": "특별한 것을 함께 만들어 봅시다",
+      "description": "비전을 공유하시면 어떻게 실현할 수 있는지 함께 살펴보겠습니다"
     }
   },
   "comingSoon": {
@@ -181,12 +495,16 @@
     "404": {
       "title": "페이지를 찾을 수 없습니다",
       "description": "찾고 계신 페이지가 존재하지 않습니다.",
-      "button": "홈으로 가기"
+      "button": "홈으로 가기",
+      "goBack": "뒤로 가기",
+      "quote": "위대한 경험은 모두 약간의 방황에서 시작됩니다."
     },
     "500": {
       "title": "서버 오류",
       "description": "우리 측에서 문제가 발생했습니다.",
-      "button": "다시 시도"
+      "button": "다시 시도",
+      "retry": "재시도",
+      "quote": "최고의 경험에도 결함이 있습니다."
     },
     "maintenance": {
       "title": "유지 보수 중",
@@ -222,5 +540,141 @@
     "viewAll": "모두 보기",
     "seeMore": "더 보기",
     "noResults": "결과를 찾을 수 없습니다"
+  },
+  "industries": {
+    "title": "서비스 제공 산업",
+    "subtitle": "주요 분야의 전문 지식",
+    "exhibitions": {
+      "name": "전시회",
+      "description": "혁신적인 부스 디자인과 인터랙티브 경험으로 무역 박람회와 엑스포에서 돋보이세요"
+    },
+    "experienceCenters": {
+      "name": "경험 센터",
+      "description": "방문자를 참여시키고 스토리를 전달하는 몰입형 브랜드 경험을 창조합니다"
+    },
+    "government": {
+      "name": "정부",
+      "description": "방문자 센터, 박물관, 정보 허브를 위한 공공 부문 솔루션"
+    },
+    "retail": {
+      "name": "리테일",
+      "description": "디지털 사이니지, 인터랙티브 디스플레이, 고객 참여로 리테일 공간을 변화시킵니다"
+    },
+    "museums": {
+      "name": "박물관",
+      "description": "인터랙티브 전시와 멀티미디어 설치를 통한 문화적 스토리텔링"
+    },
+    "corporate": {
+      "name": "기업",
+      "description": "브랜드 경험과 내부 커뮤니케이션을 위한 엔터프라이즈 솔루션"
+    },
+    "education": {
+      "name": "교육",
+      "description": "인터랙티브 학습 환경 및 교육 기술 솔루션"
+    }
+  },
+  "packages": {
+    "title": "서비스 패키지",
+    "subtitle": "모든 요구에 맞춘 솔루션",
+    "expoEssentials": {
+      "name": "엑스포 에센셜",
+      "description": "전시 참가를 위한 완벽한 시작 패키지",
+      "price": "$15,000부터",
+      "features": [
+        "3D 부스 디자인 & 비주얼라이제이션",
+        "그래픽 디자인 & 브랜딩",
+        "기본 AV 통합",
+        "현장 지원"
+      ]
+    },
+    "immersiveFeature": {
+      "name": "몰입형 피처",
+      "description": "프리미엄 인터랙티브 경험 개발",
+      "price": "$50,000부터",
+      "features": [
+        "맞춤형 인터랙티브 개발",
+        "고급 AV 시스템",
+        "콘텐츠 제작",
+        "전체 기술 지원"
+      ]
+    },
+    "tenderBooster": {
+      "name": "입찰 부스터",
+      "description": "설득력 있는 제안서로 RFP 수주",
+      "price": "$5,000부터",
+      "features": [
+        "입찰 분석 & 전략",
+        "3D 비주얼라이제이션",
+        "전문 문서화",
+        "프레젠테이션 자료"
+      ]
+    }
+  },
+  "stats": {
+    "projects": "완료된 프로젝트",
+    "clients": "만족한 고객",
+    "countries": "서비스 제공 국가",
+    "experience": "년의 경험"
+  },
+  "cta": {
+    "title": "비전을 변화시킬 준비가 되셨나요?",
+    "subtitle": "함께 특별한 것을 만들어 봅시다",
+    "button": "프로젝트 시작하기"
+  },
+  "articles": {
+    "title": "아티클 & 인사이트",
+    "subtitle": "최신 생각, 인사이트, 업계 전문 지식 탐색",
+    "hero": {
+      "title": "아티클 & 인사이트",
+      "subtitle": "전시회, 경험 디자인, 디지털 혁신에 대한 전문가 인사이트 발견",
+      "searchPlaceholder": "아티클 검색..."
+    },
+    "featured": {
+      "title": "추천 아티클",
+      "subtitle": "가장 인기 있고 영향력 있는 콘텐츠"
+    },
+    "filters": {
+      "all": "모든 아티클",
+      "category": "카테고리",
+      "tag": "태그",
+      "featured": "추천만",
+      "clearFilters": "필터 초기화",
+      "searchPlaceholder": "제목 또는 내용으로 검색..."
+    },
+    "card": {
+      "readMore": "아티클 읽기",
+      "minutesRead": "분 읽기",
+      "views": "조회",
+      "shares": "공유"
+    },
+    "detail": {
+      "share": "아티클 공유",
+      "shareOn": "공유하기",
+      "copyLink": "링크 복사",
+      "copied": "복사됨!",
+      "linkCopied": "링크가 복사되었습니다!",
+      "author": "작성자",
+      "publishedOn": "게시일",
+      "lastUpdated": "최종 업데이트",
+      "category": "카테고리",
+      "tags": "태그",
+      "relatedArticles": "관련 아티클",
+      "relatedArticlesSubtitle": "관련 주제와 인사이트 계속 탐색",
+      "home": "홈",
+      "articles": "아티클",
+      "featured": "추천",
+      "views": "조회수"
+    },
+    "empty": {
+      "title": "아티클을 찾을 수 없습니다",
+      "description": "기준과 일치하는 아티클을 찾을 수 없습니다. 필터 또는 검색어를 조정해 보세요.",
+      "button": "필터 초기화"
+    },
+    "pagination": {
+      "previous": "이전",
+      "next": "다음",
+      "page": "페이지",
+      "of": "/"
+    }
   }
 }

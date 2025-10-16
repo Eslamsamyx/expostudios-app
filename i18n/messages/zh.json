@@ -13,7 +13,8 @@
     "dashboard": "仪表板",
     "login": "登录",
     "logout": "退出",
-    "language": "语言"
+    "language": "语言",
+    "articles": "文章"
   },
   "hero": {
     "title": "我们创造可感知的体验",
@@ -22,91 +23,6 @@
     "cta": {
       "primary": "开始",
       "secondary": "了解更多"
-    }
-  },
-  "services": {
-    "title": "我们的服务",
-    "subtitle": "为您量身定制的全方位数字解决方案",
-    "webDevelopment": {
-      "title": "网站开发",
-      "description": "使用尖端技术构建的定制网站和网络应用程序"
-    },
-    "mobileApps": {
-      "title": "移动应用",
-      "description": "适用于iOS和Android的原生和跨平台移动应用程序"
-    },
-    "uiuxDesign": {
-      "title": "UI/UX设计",
-      "description": "以用户为中心的设计，创造引人入胜的数字体验"
-    },
-    "digitalMarketing": {
-      "title": "数字营销",
-      "description": "战略营销解决方案，拓展您的在线影响力"
-    },
-    "consulting": {
-      "title": "咨询服务",
-      "description": "为您的数字化转型之旅提供专家指导"
-    },
-    "maintenance": {
-      "title": "维护与支持",
-      "description": "持续支持，确保您的数字资产顺畅运行"
-    }
-  },
-  "portfolio": {
-    "title": "我们的作品",
-    "subtitle": "我们引以为豪的近期项目",
-    "viewProject": "查看项目",
-    "allProjects": "查看所有项目"
-  },
-  "about": {
-    "title": "关于我们",
-    "subtitle": "您的数字创新合作伙伴",
-    "mission": "我们的使命是通过创新的数字解决方案赋能企业，推动增长并创造持久价值。",
-    "teamTitle": "认识我们的团队",
-    "teamSubtitle": "才华横溢的专业人士致力于您的成功"
-  },
-  "contact": {
-    "title": "联系我们",
-    "subtitle": "让我们讨论您的项目",
-    "form": {
-      "name": "姓名",
-      "email": "电子邮件",
-      "phone": "电话",
-      "company": "公司",
-      "subject": "主题",
-      "message": "留言",
-      "submit": "发送消息",
-      "submitting": "发送中...",
-      "success": "消息发送成功！",
-      "error": "发送失败，请重试。"
-    },
-    "info": {
-      "email": "电子邮件",
-      "phone": "电话",
-      "address": "地址",
-      "hours": "营业时间"
-    }
-  },
-  "comingSoon": {
-    "badge": "即将推出"
-  },
-  "expertise": {
-    "title": "我们的专业领域",
-    "items": {
-      "exhibition": "展览设计",
-      "digital": "数字体验",
-      "interactive": "互动装置",
-      "brand": "品牌激活",
-      "virtual": "虚拟和AR解决方案"
-    }
-  },
-  "process": {
-    "title": "我们的流程",
-    "steps": {
-      "research": "研究与策略",
-      "design": "创意设计",
-      "production": "制作与构建",
-      "launch": "发布与支持"
     }
   },
   "services": {
@@ -155,6 +71,376 @@
     "maintenance": {
       "title": "维护与支持",
       "description": "持续支持，确保您的数字资产顺畅运行"
+    },
+    "viewDetails": "查看详情",
+    "relatedServices": "相关服务",
+    "ourProcess": "我们的流程",
+    "keyBenefits": "核心优势",
+    "consult": {
+      "name": "咨询",
+      "title": "战略与概念",
+      "tagline": "战略愿景与体验设计",
+      "description": "通过我们专业的咨询服务，将您的愿景转化为可执行的战略。",
+      "offerings": [
+        "发现与研究",
+        "叙事与概念",
+        "情绪板与故事板",
+        "投标策略"
+      ]
+    },
+    "create": {
+      "name": "创意",
+      "title": "3D设计与可视化",
+      "tagline": "创意设计与内容制作",
+      "description": "以令人惊叹的视觉效果、沉浸式内容和难忘的体验为您的品牌赋予生命。",
+      "offerings": [
+        "空间设计",
+        "3D可视化",
+        "渲染与漫游",
+        "环境图形"
+      ]
+    },
+    "build": {
+      "name": "建造",
+      "title": "开发与集成",
+      "tagline": "技术开发与集成",
+      "description": "打造强大、可扩展的解决方案，为卓越的数字和实体体验提供动力。",
+      "offerings": [
+        "Unity与Unreal开发",
+        "互动装置",
+        "视听系统集成",
+        "数据平台"
+      ]
+    },
+    "amplify": {
+      "name": "放大",
+      "title": "营销与增长",
+      "tagline": "营销与增长策略",
+      "description": "通过数据驱动的营销和受众参与，最大化您的影响力和触达率。",
+      "offerings": [
+        "品牌形象",
+        "数字营销活动",
+        "网站与移动端",
+        "社交媒体与SEO"
+      ]
+    },
+    "whyChooseUs": {
+      "title": "为什么选择我们",
+      "subtitle": "360°设计工作室：实体空间、数字体验和品牌资产",
+      "features": {
+        "creative": {
+          "title": "完整的设计解决方案",
+          "description": "3D空间设计、品牌形象、演示文稿、营销活动和互动体验。一个工作室，统一的视觉语言。"
+        },
+        "quality": {
+          "title": "可投产的交付成果",
+          "description": "技术图纸、品牌指南、宣讲文稿、网站构建和媒体资产。一切协调完毕，随时可部署。"
+        },
+        "turnkey": {
+          "title": "咨询 · 创意 · 建造 · 放大",
+          "description": "从战略到空间设计、开发到营销。一个理解空间、故事、技术和品牌的团队，从洞察到影响。"
+        },
+        "delivery": {
+          "title": "供应商协调",
+          "description": "我们监督交付，确保所建即所想，管理时间表、预算和技术指导。"
+        },
+        "global": {
+          "title": "可衡量的影响",
+          "description": "跟踪客流量、停留时间、互动、潜在客户捕获和转化率——我们从第一天起就将KPI纳入设计。"
+        },
+        "insights": {
+          "title": "发布与后续",
+          "description": "从测试和培训到内容更新计划和随叫随到的支持，开门后我们仍与您同在。"
+        }
+      }
+    },
+    "process": {
+      "title": "我们的流程",
+      "subtitle": "从洞察到影响的清晰路径",
+      "steps": {
+        "concept": {
+          "title": "研究与策略",
+          "description": "利益相关者访谈、受众洞察、KPI定义和叙事发展，协调目标并打造您的故事。"
+        },
+        "design": {
+          "title": "设计与规划",
+          "description": "空间布局、技术图纸、可视化和可建造的投产规格协调。"
+        },
+        "visualization": {
+          "title": "生产与开发",
+          "description": "互动体验、视听系统、平台和媒体。经过测试、培训，并提供完整文档交付。"
+        },
+        "fabrication": {
+          "title": "营销与发布",
+          "description": "营销活动工具包、网站、社交内容、SEO和绩效跟踪，最大化可见性和参与度。"
+        },
+        "installation": {
+          "title": "监督与协调",
+          "description": "我们管理供应商、时间表、预算和现场技术指导，确保完美执行。"
+        },
+        "activation": {
+          "title": "支持与优化",
+          "description": "内容更新、监控、分析仪表板和随叫随到的支持。发布后我们仍与您同在。"
+        }
+      }
+    },
+    "metrics": {
+      "title": "数字见证成功",
+      "subtitle": "体验设计领域的卓越表现",
+      "items": {
+        "exhibitions": {
+          "label": "交付展览",
+          "description": "成功完成"
+        },
+        "sqm": {
+          "label": "设计平方米",
+          "description": "创建的展览空间"
+        },
+        "installations": {
+          "label": "互动装置",
+          "description": "定制体验"
+        },
+        "awards": {
+          "label": "设计奖项",
+          "description": "行业认可"
+        }
+      }
+    },
+    "industries": {
+      "title": "我们服务的领域",
+      "subtitle": "跨多元领域打造体验",
+      "items": {
+        "exhibitions": "展览与展馆",
+        "museums": "博物馆与文化",
+        "retail": "零售与快闪店",
+        "corporate": "企业展厅",
+        "government": "政府与公共部门",
+        "education": "访客中心",
+        "hospitality": "体验中心",
+        "cultural": "文化空间"
+      }
+    },
+    "technologies": {
+      "title": "360°设计能力",
+      "subtitle": "空间设计、品牌塑造、互动体验和内容创作的完整工具包",
+      "categories": {
+        "design": "3D与空间设计",
+        "fabrication": "品牌与视觉形象",
+        "interactive": "互动与数字",
+        "installation": "内容与演示"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "subtitle": "与我们合作您需要了解的一切",
+      "items": {
+        "pricing": {
+          "question": "您如何定价服务？",
+          "answer": "我们基于咨询、创意、建造和放大服务提供模块化定价。每个项目都会收到涵盖设计、开发、协调和营销需求的定制报价。套餐从概念和可视化组合到全程端到端交付与现场监督。"
+        },
+        "timeline": {
+          "question": "典型的项目时间表是怎样的？",
+          "answer": "时间表因项目范围、复杂性和发布需求而异。我们从您的目标日期倒推，协调设计、开发、供应商时间表和测试阶段，以确保按时交付。在发现阶段，我们将为您的特定项目提供详细的定制时间表。"
+        },
+        "process": {
+          "question": "您的流程包括哪些内容？",
+          "answer": "我们从发现阶段开始（利益相关者访谈、KPI定义），进入设计和规划阶段（空间布局、技术规格、可视化），然后是生产阶段（互动建造、视听系统、内容），最后在整个发布过程中提供监督和支持。"
+        },
+        "support": {
+          "question": "您提供现场监督吗？",
+          "answer": "当然！我们协调供应商、管理时间表和预算、在安装期间提供技术指导并提供现场支持。发布后，我们提供内容更新计划、监控和随叫随到的支持。"
+        },
+        "revisions": {
+          "question": "包含多少次修订？",
+          "answer": "通常每个阶段有2-3轮修订，以确保一致性和质量。我们在概念、详细设计和开发阶段进行迭代，确保所建即所想。"
+        },
+        "expertise": {
+          "question": "您不提供哪些服务？",
+          "answer": "我们不做实体制造或土建工程。这些由场馆指定的承包商处理。我们提供可投产的设计、技术规格和监督，以确保无缝执行。可根据要求提供硬件采购。"
+        }
+      }
+    },
+    "cta": {
+      "title": "准备创造难忘的体验？",
+      "description": "让我们讨论您的下一个展览、装置或品牌激活。获取免费咨询，看看我们如何让空间焕发生机。",
+      "primary": "开始您的项目",
+      "secondary": "查看我们的作品集"
+    }
+  },
+  "portfolio": {
+    "title": "我们的作品",
+    "subtitle": "我们引以为豪的近期项目",
+    "viewProject": "查看项目",
+    "allProjects": "查看所有项目",
+    "filterBy": "筛选依据",
+    "featured": "精选",
+    "services": "服务",
+    "industries": "行业",
+    "technologies": "技术",
+    "year": "年份",
+    "client": "客户",
+    "industry": "行业",
+    "duration": "持续时间",
+    "challenge": "挑战",
+    "solution": "我们的解决方案",
+    "results": "成果",
+    "testimonial": "客户评价",
+    "relatedProjects": "相关项目",
+    "viewCaseStudy": "查看案例研究",
+    "visitWebsite": "访问网站",
+    "projectsFound": "个项目",
+    "noProjectsFound": "没有匹配您筛选条件的项目",
+    "clearFilters": "清除筛选"
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "您的数字创新合作伙伴",
+    "mission": "我们的使命是通过创新的数字解决方案赋能企业，推动增长并创造持久价值。",
+    "teamTitle": "认识我们的团队",
+    "teamSubtitle": "才华横溢的专业人士致力于您的成功",
+    "hero": {
+      "title": "打造明日体验",
+      "subtitle": "今日启程"
+    },
+    "story": {
+      "title": "我们的故事",
+      "subtitle": "塑造我们身份的旅程",
+      "founded": "成立于",
+      "readMore": "阅读完整故事"
+    },
+    "values": {
+      "title": "我们的价值观",
+      "subtitle": "指引我们一切行动的原则"
+    },
+    "team": {
+      "title": "认识我们的团队",
+      "subtitle": "推动创新的专业人才",
+      "viewProfile": "查看完整资料",
+      "expertise": "专长",
+      "joinedIn": "加入于",
+      "filterByDept": "按部门筛选"
+    },
+    "whyChooseUs": {
+      "title": "为什么选择ExpoStudios",
+      "subtitle": "我们与众不同之处"
+    },
+    "stats": {
+      "title": "数字见证影响",
+      "subtitle": "全球范围的可衡量成功"
+    },
+    "timeline": {
+      "title": "我们的历程",
+      "subtitle": "定义我们成长的里程碑",
+      "present": "至今"
+    },
+    "culture": {
+      "title": "ExpoStudios的生活",
+      "subtitle": "激发卓越的文化",
+      "approach": "我们的方法",
+      "approachSubtitle": "我们如何交付卓越体验"
+    },
+    "cta": {
+      "title": "准备创造非凡作品？",
+      "subtitle": "让我们将您的愿景变为现实",
+      "button": "开始您的项目",
+      "secondaryButton": "查看我们的作品"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "让我们讨论您的项目",
+    "form": {
+      "name": "姓名",
+      "email": "电子邮件",
+      "phone": "电话",
+      "company": "公司",
+      "subject": "主题",
+      "message": "留言",
+      "submit": "发送消息",
+      "submitting": "发送中...",
+      "success": "消息发送成功！",
+      "error": "发送失败，请重试。",
+      "title": "告诉我们关于您的项目",
+      "subtitle": "填写详细信息，我们将在24小时内回复您",
+      "namePlaceholder": "张三",
+      "emailPlaceholder": "zhang@company.com",
+      "phonePlaceholder": "+86 138 0000 0000",
+      "companyPlaceholder": "您的公司",
+      "projectType": "项目类型",
+      "projectTypePlaceholder": "选择项目类型",
+      "projectTypes": {
+        "exhibition": "展览展台",
+        "pavilion": "展馆设计",
+        "experienceCenter": "体验中心",
+        "museum": "博物馆装置",
+        "retail": "零售空间",
+        "corporate": "企业活动",
+        "digital": "数字平台",
+        "marketing": "营销活动",
+        "other": "其他"
+      },
+      "budget": "预算范围",
+      "budgetPlaceholder": "选择您的预算",
+      "budgetRanges": {
+        "small": "25,000美元以下",
+        "medium": "25,000 - 75,000美元",
+        "large": "75,000 - 150,000美元",
+        "enterprise": "150,000美元以上",
+        "flexible": "灵活"
+      },
+      "timeline": "项目时间表",
+      "timelinePlaceholder": "您何时需要？",
+      "timelines": {
+        "urgent": "尽快（1-2个月）",
+        "normal": "标准（3-4个月）",
+        "flexible": "灵活（5个月以上）",
+        "planning": "仅规划阶段"
+      },
+      "messagePlaceholder": "告诉我们您的愿景、目标和任何具体要求...",
+      "successMessage": "我们的团队将审核您的项目并在24小时内回复您。",
+      "errorMessage": "请重试或直接通过电子邮件联系我们。",
+      "required": "必填字段",
+      "invalidEmail": "请输入有效的电子邮件地址"
+    },
+    "info": {
+      "email": "电子邮件",
+      "phone": "电话",
+      "address": "地址",
+      "hours": "营业时间",
+      "title": "联系信息",
+      "subtitle": "与我们取得联系",
+      "emailValue": "hello@expostudios.com",
+      "phoneValue": "+1 (555) 123-4567",
+      "addressValue": "123 Design Street, Innovation City, IC 12345",
+      "hoursValue": "周一至周五：上午9:00 - 下午6:00"
+    },
+    "description": "无论是展览展台、体验中心还是数字平台，我们都在这里将您的想法变为现实",
+    "hero": {
+      "title": "开启您的旅程",
+      "subtitle": "让我们创造非凡作品",
+      "description": "与我们分享您的愿景，让我们一起探索如何实现它"
+    }
+  },
+  "comingSoon": {
+    "badge": "即将推出"
+  },
+  "expertise": {
+    "title": "我们的专业领域",
+    "items": {
+      "exhibition": "展览设计",
+      "digital": "数字体验",
+      "interactive": "互动装置",
+      "brand": "品牌激活",
+      "virtual": "虚拟和AR解决方案"
+    }
+  },
+  "process": {
+    "title": "我们的流程",
+    "steps": {
+      "research": "研究与策略",
+      "design": "创意设计",
+      "production": "制作与构建",
+      "launch": "发布与支持"
     }
   },
   "newsletter": {
@@ -209,12 +495,16 @@
     "404": {
       "title": "页面未找到",
       "description": "您寻找的页面不存在。",
-      "button": "返回首页"
+      "button": "返回首页",
+      "goBack": "返回",
+      "quote": "每一次伟大的体验都始于一点点迷失。"
     },
     "500": {
       "title": "服务器错误",
       "description": "我们这边出了点问题。",
-      "button": "重试"
+      "button": "重试",
+      "retry": "重试",
+      "quote": "即使最好的体验也会有小故障。"
     },
     "maintenance": {
       "title": "维护中",
@@ -250,5 +540,141 @@
     "viewAll": "查看全部",
     "seeMore": "查看更多",
     "noResults": "未找到结果"
+  },
+  "industries": {
+    "title": "我们服务的行业",
+    "subtitle": "跨关键领域的专业技能",
+    "exhibitions": {
+      "name": "展览会",
+      "description": "通过创新的展台设计和互动体验，在贸易展和博览会上脱颖而出"
+    },
+    "experienceCenters": {
+      "name": "体验中心",
+      "description": "创造沉浸式的品牌体验，吸引访客并讲述您的故事"
+    },
+    "government": {
+      "name": "政府",
+      "description": "为访客中心、博物馆和信息中心提供公共部门解决方案"
+    },
+    "retail": {
+      "name": "零售",
+      "description": "通过数字标牌、互动展示和客户参与改造零售空间"
+    },
+    "museums": {
+      "name": "博物馆",
+      "description": "通过互动展览和多媒体装置讲述文化故事"
+    },
+    "corporate": {
+      "name": "企业",
+      "description": "为品牌体验和内部沟通提供企业解决方案"
+    },
+    "education": {
+      "name": "教育",
+      "description": "互动学习环境和教育技术解决方案"
+    }
+  },
+  "packages": {
+    "title": "服务套餐",
+    "subtitle": "为每种需求量身定制的解决方案",
+    "expoEssentials": {
+      "name": "展会必备",
+      "description": "展览参展的完美入门套餐",
+      "price": "15,000美元起",
+      "features": [
+        "3D展台设计与可视化",
+        "平面设计与品牌",
+        "基础视听集成",
+        "现场支持"
+      ]
+    },
+    "immersiveFeature": {
+      "name": "沉浸式特色",
+      "description": "高端互动体验开发",
+      "price": "50,000美元起",
+      "features": [
+        "定制互动开发",
+        "先进视听系统",
+        "内容制作",
+        "全面技术支持"
+      ]
+    },
+    "tenderBooster": {
+      "name": "投标助推器",
+      "description": "以有说服力的提案赢得RFP",
+      "price": "5,000美元起",
+      "features": [
+        "投标分析与策略",
+        "3D可视化",
+        "专业文档",
+        "演示材料"
+      ]
+    }
+  },
+  "stats": {
+    "projects": "已完成项目",
+    "clients": "满意客户",
+    "countries": "服务国家",
+    "experience": "年经验"
+  },
+  "cta": {
+    "title": "准备转化您的愿景？",
+    "subtitle": "让我们一起创造非凡作品",
+    "button": "开始您的项目"
+  },
+  "articles": {
+    "title": "文章与见解",
+    "subtitle": "探索我们最新的想法、见解和行业专业知识",
+    "hero": {
+      "title": "文章与见解",
+      "subtitle": "发现有关展览、体验设计和数字创新的专家见解",
+      "searchPlaceholder": "搜索文章..."
+    },
+    "featured": {
+      "title": "精选文章",
+      "subtitle": "我们最受欢迎和最有影响力的内容"
+    },
+    "filters": {
+      "all": "所有文章",
+      "category": "分类",
+      "tag": "标签",
+      "featured": "仅精选",
+      "clearFilters": "清除筛选",
+      "searchPlaceholder": "按标题或内容搜索..."
+    },
+    "card": {
+      "readMore": "阅读文章",
+      "minutesRead": "分钟阅读",
+      "views": "浏览",
+      "shares": "分享"
+    },
+    "detail": {
+      "share": "分享文章",
+      "shareOn": "分享至",
+      "copyLink": "复制链接",
+      "copied": "已复制！",
+      "linkCopied": "链接已复制！",
+      "author": "作者",
+      "publishedOn": "发布于",
+      "lastUpdated": "最后更新",
+      "category": "分类",
+      "tags": "标签",
+      "relatedArticles": "相关文章",
+      "relatedArticlesSubtitle": "继续探索相关主题和见解",
+      "home": "首页",
+      "articles": "文章",
+      "featured": "精选",
+      "views": "浏览量"
+    },
+    "empty": {
+      "title": "未找到文章",
+      "description": "我们找不到任何符合您标准的文章。请尝试调整您的筛选条件或搜索查询。",
+      "button": "清除筛选"
+    },
+    "pagination": {
+      "previous": "上一页",
+      "next": "下一页",
+      "page": "第",
+      "of": "页，共"
+    }
   }
 }

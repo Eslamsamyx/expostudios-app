@@ -13,7 +13,8 @@
     "dashboard": "Dashboard",
     "login": "Accedi",
     "logout": "Esci",
-    "language": "Lingua"
+    "language": "Lingua",
+    "articles": "Articoli"
   },
   "hero": {
     "title": "Creiamo esperienze che le persone possono sentire",
@@ -70,20 +71,280 @@
     "delivery": {
       "title": "Consegna del Progetto",
       "subtitle": "Esecuzione senza soluzione di continuità dal concetto al completamento"
+    },
+    "viewDetails": "Vedi Dettagli",
+    "relatedServices": "Servizi Correlati",
+    "ourProcess": "Il Nostro Processo",
+    "keyBenefits": "Vantaggi Principali",
+    "consult": {
+      "name": "CONSULENZA",
+      "title": "Strategia e Concept",
+      "tagline": "Visione Strategica e Design dell'Esperienza",
+      "description": "Trasformiamo la Sua visione in strategie concrete con i nostri servizi di consulenza specializzata.",
+      "offerings": [
+        "Ricerca e Analisi",
+        "Narrativa e Concept",
+        "Moodboard e Storyboard",
+        "Strategia per Tender"
+      ]
+    },
+    "create": {
+      "name": "CREA",
+      "title": "Design 3D e Visualizzazione",
+      "tagline": "Design Creativo e Produzione Contenuti",
+      "description": "Diamo vita al Suo brand con visual straordinari, contenuti immersivi ed esperienze memorabili.",
+      "offerings": [
+        "Design Spaziale",
+        "Visualizzazione 3D",
+        "Rendering e Walkthrough",
+        "Grafica Ambientale"
+      ]
+    },
+    "build": {
+      "name": "REALIZZA",
+      "title": "Sviluppo e Integrazione",
+      "tagline": "Sviluppo Tecnico e Integrazione",
+      "description": "Progettiamo soluzioni robuste e scalabili che alimentano esperienze digitali e fisiche eccezionali.",
+      "offerings": [
+        "Sviluppo Unity e Unreal",
+        "Installazioni Interattive",
+        "Integrazione Sistemi AV",
+        "Piattaforme Dati"
+      ]
+    },
+    "amplify": {
+      "name": "AMPLIFICA",
+      "title": "Marketing e Crescita",
+      "tagline": "Strategie di Marketing e Crescita",
+      "description": "Massimizziamo la Sua visibilità e il Suo impatto con marketing data-driven e coinvolgimento del pubblico.",
+      "offerings": [
+        "Identità di Brand",
+        "Campagne Digitali",
+        "Web e Mobile",
+        "Social Media e SEO"
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Perché Scegliere Noi",
+      "subtitle": "Studio di design a 360°: spazi fisici, esperienze digitali e asset di brand",
+      "features": {
+        "creative": {
+          "title": "Soluzioni di Design Complete",
+          "description": "Design spaziale 3D, identità di brand, presentazioni, campagne ed esperienze interattive. Tutto da un unico studio, tutto nella stessa lingua visiva."
+        },
+        "quality": {
+          "title": "Deliverable Pronti per la Produzione",
+          "description": "Disegni tecnici, linee guida brand, pitch deck, web build e asset media. Tutto coordinato e pronto per il deployment."
+        },
+        "turnkey": {
+          "title": "Consulta · Crea · Realizza · Amplifica",
+          "description": "Dalla strategia al design spaziale allo sviluppo al marketing. Un unico team che comprende spazio, storia, tecnologia e brand dall'insight all'impatto."
+        },
+        "delivery": {
+          "title": "Coordinamento Fornitori",
+          "description": "Supervisioniamo la realizzazione affinché ciò che viene costruito corrisponda a ciò che è stato immaginato, gestendo tempistiche, budget e direzione tecnica."
+        },
+        "global": {
+          "title": "Impatto Misurabile",
+          "description": "Monitoriamo affluenza, tempo di permanenza, interazioni, acquisizione lead e conversione - progettiamo con i KPI in mente fin dal primo giorno."
+        },
+        "insights": {
+          "title": "Lancio e Oltre",
+          "description": "Dal testing e training ai piani di aggiornamento contenuti e supporto on-call, siamo con Lei anche dopo l'apertura."
+        }
+      }
+    },
+    "process": {
+      "title": "Il Nostro Processo",
+      "subtitle": "Un percorso chiaro dall'insight all'impatto",
+      "steps": {
+        "concept": {
+          "title": "Ricerca e Strategia",
+          "description": "Interviste agli stakeholder, insight sul pubblico, definizione KPI e sviluppo narrativo per allineare gli obiettivi e costruire la Sua storia."
+        },
+        "design": {
+          "title": "Design e Pianificazione",
+          "description": "Layout spaziali, disegni tecnici, visualizzazioni e specifiche pronte per la produzione coordinati per la realizzabilità."
+        },
+        "visualization": {
+          "title": "Produzione e Sviluppo",
+          "description": "Esperienze interattive, sistemi AV, piattaforme e media. Testati, formati e consegnati con documentazione completa."
+        },
+        "fabrication": {
+          "title": "Marketing e Lancio",
+          "description": "Toolkit per campagne, web, contenuti social, SEO e tracking delle performance per massimizzare visibilità e coinvolgimento."
+        },
+        "installation": {
+          "title": "Supervisione e Coordinamento",
+          "description": "Gestiamo fornitori, programmi, budget e direzione tecnica on-site per garantire un'esecuzione impeccabile."
+        },
+        "activation": {
+          "title": "Supporto e Ottimizzazione",
+          "description": "Aggiornamento contenuti, monitoraggio, dashboard analytics e supporto on-call. Siamo con Lei dopo il lancio."
+        }
+      }
+    },
+    "metrics": {
+      "title": "Successo in Numeri",
+      "subtitle": "Eccellenza comprovata nel design esperienziale",
+      "items": {
+        "exhibitions": {
+          "label": "Esposizioni Realizzate",
+          "description": "Completate con successo"
+        },
+        "sqm": {
+          "label": "Metri Quadri Progettati",
+          "description": "Spazio espositivo creato"
+        },
+        "installations": {
+          "label": "Installazioni Interattive",
+          "description": "Esperienze personalizzate"
+        },
+        "awards": {
+          "label": "Premi di Design",
+          "description": "Riconoscimenti nel settore"
+        }
+      }
+    },
+    "industries": {
+      "title": "Dove Operiamo",
+      "subtitle": "Creiamo esperienze in settori diversi",
+      "items": {
+        "exhibitions": "Esposizioni e Padiglioni",
+        "museums": "Musei e Cultura",
+        "retail": "Retail e Pop-up",
+        "corporate": "Showcase Aziendali",
+        "government": "Governo e Settore Pubblico",
+        "education": "Centri Visitatori",
+        "hospitality": "Experience Center",
+        "cultural": "Spazi Culturali"
+      }
+    },
+    "technologies": {
+      "title": "Capacità di Design a 360°",
+      "subtitle": "Toolkit completo per design spaziale, branding, esperienze interattive e creazione contenuti",
+      "categories": {
+        "design": "Design 3D e Spaziale",
+        "fabrication": "Identità Brand e Visual",
+        "interactive": "Interattivo e Digitale",
+        "installation": "Contenuti e Presentazioni"
+      }
+    },
+    "faq": {
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto ciò che deve sapere per lavorare con noi",
+      "items": {
+        "pricing": {
+          "question": "Come calcolate i vostri servizi?",
+          "answer": "Offriamo prezzi modulari basati sui servizi Consulta, Crea, Realizza e Amplifica. Ogni progetto riceve un preventivo personalizzato che copre design, sviluppo, coordinamento ed esigenze di marketing. I pacchetti partono da bundle di concept e visualizzazione fino alla consegna completa end-to-end con supervisione on-site."
+        },
+        "timeline": {
+          "question": "Quali sono le tempistiche tipiche di un progetto?",
+          "answer": "Le tempistiche variano in base a portata, complessità e requisiti di lancio del progetto. Lavoriamo a ritroso dalla Sua data target, coordinando fasi di design, sviluppo, programmi fornitori e testing per garantire la consegna puntuale. Durante la fase di discovery, forniremo una timeline dettagliata su misura per il Suo progetto specifico."
+        },
+        "process": {
+          "question": "Cosa prevede il vostro processo?",
+          "answer": "Iniziamo con la discovery (interviste stakeholder, definizione KPI), passiamo a design e pianificazione (layout spaziali, specifiche tecniche, visualizzazioni), poi produzione (build interattive, sistemi AV, contenuti), seguita da supervisione e supporto durante tutto il lancio."
+        },
+        "support": {
+          "question": "Fornite supervisione on-site?",
+          "answer": "Sì! Coordiniamo fornitori, gestiamo programmi e budget, forniamo direzione tecnica durante l'installazione e offriamo supporto on-site. Dopo il lancio, forniamo piani di aggiornamento contenuti, monitoraggio e supporto on-call."
+        },
+        "revisions": {
+          "question": "Quante revisioni sono incluse?",
+          "answer": "Tipicamente 2-3 cicli di revisione per fase per garantire allineamento e qualità. Iteriamo nelle fasi di concept, design dettagliato e sviluppo, assicurando che ciò che viene costruito corrisponda a ciò che è stato immaginato."
+        },
+        "expertise": {
+          "question": "Quali servizi non fornite?",
+          "answer": "Non ci occupiamo di fabbricazione fisica o lavori civili. Questi sono gestiti da appaltatori designati dalla venue. Forniamo design pronti per la produzione, specifiche tecniche e supervisione per garantire un'esecuzione impeccabile. L'approvvigionamento hardware può essere incluso su richiesta."
+        }
+      }
+    },
+    "cta": {
+      "title": "Pronto a Creare un'Esperienza Indimenticabile?",
+      "description": "Parliamo della Sua prossima esposizione, installazione o attivazione di brand. Ottenga una consulenza gratuita e scopra come diamo vita agli spazi.",
+      "primary": "Avvia il Tuo Progetto",
+      "secondary": "Vedi il Nostro Portfolio"
     }
   },
   "portfolio": {
     "title": "I Nostri Lavori",
     "subtitle": "Progetti recenti di cui siamo orgogliosi",
     "viewProject": "Vedi Progetto",
-    "allProjects": "Vedi Tutti i Progetti"
+    "allProjects": "Vedi Tutti i Progetti",
+    "filterBy": "Filtra Per",
+    "featured": "In Evidenza",
+    "services": "Servizi",
+    "industries": "Settori",
+    "technologies": "Tecnologie",
+    "year": "Anno",
+    "client": "Cliente",
+    "industry": "Settore",
+    "duration": "Durata",
+    "challenge": "La Sfida",
+    "solution": "La Nostra Soluzione",
+    "results": "Risultati",
+    "testimonial": "Cosa Dicono di Noi",
+    "relatedProjects": "Progetti Correlati",
+    "viewCaseStudy": "Vedi Case Study",
+    "visitWebsite": "Visita il Sito",
+    "projectsFound": "progetti trovati",
+    "noProjectsFound": "Nessun progetto corrisponde ai tuoi filtri",
+    "clearFilters": "Cancella Filtri"
   },
   "about": {
     "title": "Chi Siamo",
     "subtitle": "Il tuo partner nell'innovazione digitale",
     "mission": "La nostra missione è dare potere alle aziende attraverso soluzioni digitali innovative che guidano la crescita e creano valore duraturo.",
     "teamTitle": "Incontra il Nostro Team",
-    "teamSubtitle": "Professionisti di talento dedicati al tuo successo"
+    "teamSubtitle": "Professionisti di talento dedicati al tuo successo",
+    "hero": {
+      "title": "Creiamo le Esperienze di Domani",
+      "subtitle": "Oggi"
+    },
+    "story": {
+      "title": "La Nostra Storia",
+      "subtitle": "Il viaggio che ha plasmato chi siamo",
+      "founded": "Fondato nel",
+      "readMore": "Leggi la Storia Completa"
+    },
+    "values": {
+      "title": "I Nostri Valori",
+      "subtitle": "I principi che guidano tutto ciò che facciamo"
+    },
+    "team": {
+      "title": "Incontra il Nostro Team",
+      "subtitle": "Professionisti di talento che guidano l'innovazione",
+      "viewProfile": "Vedi Profilo Completo",
+      "expertise": "Competenze",
+      "joinedIn": "Entrato nel",
+      "filterByDept": "Filtra per Dipartimento"
+    },
+    "whyChooseUs": {
+      "title": "Perché Scegliere ExpoStudios",
+      "subtitle": "Ciò che ci distingue dagli altri"
+    },
+    "stats": {
+      "title": "Impatto in Numeri",
+      "subtitle": "Successo misurabile in tutto il mondo"
+    },
+    "timeline": {
+      "title": "Il Nostro Percorso",
+      "subtitle": "Le tappe che definiscono la nostra crescita",
+      "present": "Presente"
+    },
+    "culture": {
+      "title": "La Vita in ExpoStudios",
+      "subtitle": "Una cultura che ispira l'eccellenza",
+      "approach": "Il Nostro Approccio",
+      "approachSubtitle": "Come offriamo esperienze eccezionali"
+    },
+    "cta": {
+      "title": "Pronto a Creare Qualcosa di Straordinario?",
+      "subtitle": "Diamo vita alla Sua visione",
+      "button": "Avvia il Tuo Progetto",
+      "secondaryButton": "Vedi i Nostri Lavori"
+    }
   },
   "contact": {
     "title": "Contattaci",
@@ -98,13 +359,66 @@
       "submit": "Invia Messaggio",
       "submitting": "Invio...",
       "success": "Messaggio inviato con successo!",
-      "error": "Impossibile inviare il messaggio. Riprova."
+      "error": "Impossibile inviare il messaggio. Riprova.",
+      "title": "Ci Racconti del Suo Progetto",
+      "subtitle": "Compili i dettagli e La ricontatteremo entro 24 ore",
+      "namePlaceholder": "Mario Rossi",
+      "emailPlaceholder": "mario@azienda.com",
+      "phonePlaceholder": "+39 333 123 4567",
+      "companyPlaceholder": "La Sua Azienda",
+      "projectType": "Tipo di Progetto",
+      "projectTypePlaceholder": "Selezioni il tipo di progetto",
+      "projectTypes": {
+        "exhibition": "Stand Fieristico",
+        "pavilion": "Design Padiglione",
+        "experienceCenter": "Experience Center",
+        "museum": "Installazione Museale",
+        "retail": "Spazio Retail",
+        "corporate": "Evento Aziendale",
+        "digital": "Piattaforma Digitale",
+        "marketing": "Campagna Marketing",
+        "other": "Altro"
+      },
+      "budget": "Budget Previsto",
+      "budgetPlaceholder": "Selezioni il Suo budget",
+      "budgetRanges": {
+        "small": "Fino a €25.000",
+        "medium": "€25.000 - €75.000",
+        "large": "€75.000 - €150.000",
+        "enterprise": "Oltre €150.000",
+        "flexible": "Flessibile"
+      },
+      "timeline": "Tempistiche Progetto",
+      "timelinePlaceholder": "Quando Le serve?",
+      "timelines": {
+        "urgent": "Urgente (1-2 mesi)",
+        "normal": "Standard (3-4 mesi)",
+        "flexible": "Flessibile (5+ mesi)",
+        "planning": "Solo Pianificazione"
+      },
+      "messagePlaceholder": "Ci racconti della Sua visione, obiettivi ed eventuali requisiti specifici...",
+      "successMessage": "Il nostro team esaminerà il Suo progetto e La ricontatterà entro 24 ore.",
+      "errorMessage": "La preghiamo di riprovare o contattarci direttamente via email.",
+      "required": "Campo obbligatorio",
+      "invalidEmail": "Inserisca un indirizzo email valido"
     },
     "info": {
       "email": "Email",
       "phone": "Telefono",
       "address": "Indirizzo",
-      "hours": "Orari di Lavoro"
+      "hours": "Orari di Lavoro",
+      "title": "Informazioni di Contatto",
+      "subtitle": "Mettiti in contatto con noi",
+      "emailValue": "hello@expostudios.com",
+      "phoneValue": "+39 02 1234 5678",
+      "addressValue": "Via del Design 123, Milano, 20100",
+      "hoursValue": "Lun - Ven: 9:00 - 18:00"
+    },
+    "description": "Che si tratti di uno stand fieristico, experience center o piattaforma digitale, siamo qui per dare vita alle Sue idee",
+    "hero": {
+      "title": "Inizi il Suo Viaggio",
+      "subtitle": "Creiamo insieme qualcosa di straordinario",
+      "description": "Condivida con noi la Sua visione ed esploriamo insieme come darle vita"
     }
   },
   "comingSoon": {
@@ -181,12 +495,16 @@
     "404": {
       "title": "Pagina Non Trovata",
       "description": "La pagina che stai cercando non esiste.",
-      "button": "Vai alla Home"
+      "button": "Vai alla Home",
+      "goBack": "Torna Indietro",
+      "quote": "Ogni grande esperienza inizia perdendosi un po'."
     },
     "500": {
       "title": "Errore del Server",
       "description": "Qualcosa è andato storto da parte nostra.",
-      "button": "Riprova"
+      "button": "Riprova",
+      "retry": "Riprova",
+      "quote": "Anche le migliori esperienze hanno i loro intoppi."
     },
     "maintenance": {
       "title": "In Manutenzione",
@@ -222,5 +540,141 @@
     "viewAll": "Vedi tutto",
     "seeMore": "Vedi di più",
     "noResults": "Nessun risultato trovato"
+  },
+  "industries": {
+    "title": "Settori che Serviamo",
+    "subtitle": "Competenza specializzata in settori chiave",
+    "exhibitions": {
+      "name": "Esposizioni",
+      "description": "Si distingua alle fiere ed expo con design innovativi di stand ed esperienze interattive"
+    },
+    "experienceCenters": {
+      "name": "Experience Center",
+      "description": "Crei esperienze di brand immersive che coinvolgono i visitatori e raccontano la Sua storia"
+    },
+    "government": {
+      "name": "Pubblico",
+      "description": "Soluzioni per il settore pubblico: centri visitatori, musei e hub informativi"
+    },
+    "retail": {
+      "name": "Retail",
+      "description": "Trasformi gli spazi retail con digital signage, display interattivi e customer engagement"
+    },
+    "museums": {
+      "name": "Musei",
+      "description": "Storytelling culturale attraverso exhibit interattivi e installazioni multimediali"
+    },
+    "corporate": {
+      "name": "Aziendale",
+      "description": "Soluzioni enterprise per esperienze di brand e comunicazioni interne"
+    },
+    "education": {
+      "name": "Educazione",
+      "description": "Ambienti di apprendimento interattivi e soluzioni di tecnologia educativa"
+    }
+  },
+  "packages": {
+    "title": "Pacchetti di Servizi",
+    "subtitle": "Soluzioni su misura per ogni esigenza",
+    "expoEssentials": {
+      "name": "Expo Essentials",
+      "description": "Pacchetto starter perfetto per la presenza fieristica",
+      "price": "Da €15.000",
+      "features": [
+        "Design e visualizzazione stand 3D",
+        "Graphic design e branding",
+        "Integrazione AV base",
+        "Supporto on-site"
+      ]
+    },
+    "immersiveFeature": {
+      "name": "Immersive Feature",
+      "description": "Sviluppo premium di esperienze interattive",
+      "price": "Da €50.000",
+      "features": [
+        "Sviluppo interattivo personalizzato",
+        "Sistemi AV avanzati",
+        "Produzione contenuti",
+        "Supporto tecnico completo"
+      ]
+    },
+    "tenderBooster": {
+      "name": "Tender Booster",
+      "description": "Vinca le gare con proposte convincenti",
+      "price": "Da €5.000",
+      "features": [
+        "Analisi e strategia tender",
+        "Visualizzazioni 3D",
+        "Documentazione professionale",
+        "Materiali di presentazione"
+      ]
+    }
+  },
+  "stats": {
+    "projects": "Progetti Completati",
+    "clients": "Clienti Soddisfatti",
+    "countries": "Paesi Serviti",
+    "experience": "Anni di Esperienza"
+  },
+  "cta": {
+    "title": "Pronto a Trasformare la Sua Visione?",
+    "subtitle": "Creiamo insieme qualcosa di straordinario",
+    "button": "Avvia il Tuo Progetto"
+  },
+  "articles": {
+    "title": "Articoli e Approfondimenti",
+    "subtitle": "Esplori i nostri ultimi pensieri, insight e competenze del settore",
+    "hero": {
+      "title": "Articoli e Approfondimenti",
+      "subtitle": "Scopra insight esperti su esposizioni, design esperienziale e innovazione digitale",
+      "searchPlaceholder": "Cerca articoli..."
+    },
+    "featured": {
+      "title": "Articoli in Evidenza",
+      "subtitle": "I nostri contenuti più popolari e di impatto"
+    },
+    "filters": {
+      "all": "Tutti gli Articoli",
+      "category": "Categoria",
+      "tag": "Tag",
+      "featured": "Solo in Evidenza",
+      "clearFilters": "Cancella Filtri",
+      "searchPlaceholder": "Cerca per titolo o contenuto..."
+    },
+    "card": {
+      "readMore": "Leggi Articolo",
+      "minutesRead": "min di lettura",
+      "views": "visualizzazioni",
+      "shares": "condivisioni"
+    },
+    "detail": {
+      "share": "Condividi Articolo",
+      "shareOn": "Condividi su",
+      "copyLink": "Copia Link",
+      "copied": "Copiato!",
+      "linkCopied": "Link copiato!",
+      "author": "Scritto da",
+      "publishedOn": "Pubblicato il",
+      "lastUpdated": "Ultimo aggiornamento",
+      "category": "Categoria",
+      "tags": "Tag",
+      "relatedArticles": "Articoli Correlati",
+      "relatedArticlesSubtitle": "Continua a esplorare argomenti e insight correlati",
+      "home": "Home",
+      "articles": "Articoli",
+      "featured": "In Evidenza",
+      "views": "Visualizzazioni"
+    },
+    "empty": {
+      "title": "Nessun Articolo Trovato",
+      "description": "Non abbiamo trovato articoli che corrispondono ai Suoi criteri. Provi a modificare i filtri o la ricerca.",
+      "button": "Cancella Filtri"
+    },
+    "pagination": {
+      "previous": "Precedente",
+      "next": "Successivo",
+      "page": "Pagina",
+      "of": "di"
+    }
   }
 }
